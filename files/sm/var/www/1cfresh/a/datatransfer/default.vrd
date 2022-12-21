@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<point
+    base="/a/datatransfer"
+    ib="Srvr=1cfreshl.example;Ref=sm;Usr=u_dt;Pwd=12345Qwer;"
+    xmlns="http://v8.1c.ru/8.2/virtual-resource-system"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    enable="false">
+    <httpServices
+        publishByDefault="false"
+        publishExtensionsByDefault="true">
+        <service
+            rootUrl="dt"
+            enable="true"
+            reuseSessions="autouse"
+            sessionMaxAge="200" 
+            poolSize="10"
+            poolTimeout="50"/>
+    </httpServices>
+</point>

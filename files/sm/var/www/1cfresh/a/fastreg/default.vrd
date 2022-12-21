@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<point
+    base="/a/fastreg"
+    ib="Srvr=1cfreshl.example;Ref=sm;Usr=u_fastreg;Pwd=12345Qwer;"
+    xmlns="http://v8.1c.ru/8.2/virtual-resource-system"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    enable="false">
+    <httpServices
+        publishByDefault="false"
+        publishExtensionsByDefault="true">
+        <service
+            name="FastExternalRegistration"
+            rootUrl="FastExternalRegistration"
+            enable="true" />
+    </httpServices>
+</point>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns="http://v8.1c.ru/v8/tech-log">
+   <log location="/var/log/1c/logs/excp" history="24">
+      <event>
+         <eq property="name" value="excp"/>
+      </event>
+      <property name="all"/>
+   </log>
+   <log location="/var/log/1c/logs/vrs" history="24">
+      <event>
+         <eq property="name" value="vrsrequest"/>
+      </event>
+      <event>
+         <eq property="name" value="vrsresponse"/>
+      </event>
+      <property name="all"/>
+    </log>
+</config>

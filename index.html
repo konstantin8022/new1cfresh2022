@@ -1,0 +1,3009 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Дистрибутивы для демонстрационного примера № 3</title>
+    <style>html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	font-family: "Droid Sans", "CMU Sans Serif", "Liberation Sans", FreeSans, "DejaVu Sans", "Lucida Grande", "Segoe UI", Tahoma, "Lucida Sans Unicode", "Doulos SIL", "TITUS Cyberbit Basic", "Last Resort", "Arial Unicode MS", Helvetica, sans-serif;
+	font-size: 15px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	margin: 0;
+	line-height: 1.42857143;
+	color: #333;
+	background-color: #fff
+}
+
+.container:after, .container:before, .row:after, .row:before {
+	display: table;
+	content: " ";
+}
+
+.container:after, .row:after {
+	clear: both;
+}
+
+.container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media (min-width: 768px) {.container {width: 750px}}
+@media (min-width: 992px) {.container {width: 970px}}
+@media (min-width: 1200px) {.container {width: 1170px}}
+
+a {
+	text-decoration: none;
+	outline: none;
+	color: #c4161c;
+}
+
+a:hover, a:focus {
+	border-bottom: 1px dashed #8b8d8f;
+	text-decoration: none;
+	color: #737576;
+}
+
+a:active {
+	color: #941d22
+}
+
+a:focus {
+	outline: thin dotted;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px
+}
+
+
+table.titleblock {
+	width: 100%;
+	background-color: #ffffd6
+}
+
+.titleblock h1, .titleblock h2, .titleblock h3 {
+	margin: 12px 0
+}
+
+.titleblock h1 {
+	font-size: 36px;
+	color: #823602;
+	font-weight: 700
+}
+
+.titleblock h2 {
+	font-size: 28px;
+	color: #823602;
+	font-weight: 500
+}
+
+.titleblock h3 {
+	font-size: 28px;
+	color: #201dff;
+	font-weight: 500
+}
+
+.titleblock td {
+	border: 3px double #823602;
+	padding: 12px 24px;
+}
+
+.titleblock h1, .titleblock h2, .titleblock h3 {
+	margin: 12px 0
+}
+
+.contents h1 {
+	font-size: 2em;
+	margin: .5em 0 .25em 0;
+	color: mediumblue;
+}
+
+.contents h2 {
+	font-size: 1.5em;
+	font-weight: 500;
+	margin: .5em 0 .25em 0;
+	color: mediumblue;
+}
+
+.contents p,
+.contents li {
+	line-height: 130%;
+}
+
+.contents p {
+	margin: 12px 0;
+}
+
+.contents li {
+	margin-top: 6px;
+	margin-bottom: 0;
+	margin-left: 0;
+	display: list-item;
+	text-align: left;
+}
+
+.contents li li:last-child {
+	margin-bottom: 6px;
+}
+
+.contents li p:first-child {
+	margin-top: 0;
+	margin-left: 0;
+	display: inline;
+}
+.contents ul {
+	padding: 0;
+	margin: 0 0 6px 25px;
+}
+
+.contents ul > li:before {
+	font-size: 35px;
+}
+
+.contents ul > li ul > li:before {
+	font-size: 35px;
+	content: "\25E6";
+	color: #2650d6;
+	position: absolute;
+	left: -27px;
+	top: -1px;
+}
+
+.contents ul > li + li {
+	margin-top: 1px;
+}
+
+/* ���������� ������������ �������  */
+
+.contents ol {
+	display: block;
+	padding-left: 10px;
+	margin: 0 0 10px 25px;
+	list-style: none;
+	counter-reset: nlistno;
+}
+
+pre {
+	background: #f4f4f4;
+	border: 1px solid #ddd;
+	border-left: 3px solid #f36d33;
+	color: #666;
+	page-break-inside: avoid;
+	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+	font-size: 15px;
+	line-height: 1.2;
+	margin-bottom: 12px;
+	margin-top: 12px;
+	max-width: 100%;
+	overflow: auto;
+	padding: 0.5em 1.5em;
+	display: block;
+	word-wrap: break-word;
+}
+
+.contents li p:first-child {
+	margin-top: 0;
+	margin-left: 0;
+	display: inline;
+}
+
+.contents table.cyanheadergrid{border-collapse: collapse;width: 100%}
+
+.contents .cyanheadergrid th,
+.contents .cyanheadergrid td{
+	border: 1px solid black;
+	padding: 4px;
+	font-size: 15px;}
+
+.contents .cyanheadergrid th{
+	background-color: #daeff3;
+	text-align: center;}
+
+.contents .cyanheadergrid p{
+	margin-top: 0;
+	margin-bottom: 0;}
+
+.contents .cyanheadergrid p{
+	margin-top: 0;
+	margin-bottom: 0;}
+    </style>
+    <link rel="shortcut icon" type="image/png" href="files/favicon.png">
+  </head>
+  <body>
+    <div class="container">
+      <table class="titleblock">
+        <tbody>
+          <tr>
+            <td><h1>1С:Предприятие 8. Облачная подсистема Фреш</h1>
+              <h2>Демонстрационный пример № 1 развертывания сервиса Фреш</h2>
+              <h3>Файлы настроек и&nbsp;cсылки для скачивания необходимых программ</h3></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="contents">
+        <h1><a name="distr" id="distr"></a>Глава 2. Подготовка дистрибутивов</h1>
+        <h2>2.1. Дистрибутив операционной системы Ubuntu 20.04.5 LTS</h2>
+        <ul>
+          <li><a class="hyperlink" href="https://releases.ubuntu.com/focal/ubuntu-20.04.5-live-server-amd64.iso" title="Ссылка: https://releases.ubuntu.com/focal/ubuntu-20.04.5-live-server-amd64.iso" target="_blank" rel="nofollow">Дистрибутив в официальном хранилище Ubuntu</a></li>
+          <li><a class="hyperlink" href="https://mirror.yandex.ru/ubuntu-releases/20.04.5/ubuntu-20.04.5-live-server-amd64.iso" title="Ссылка: https://mirror.yandex.ru/ubuntu-releases/20.04.5/ubuntu-20.04.5-live-server-amd64.iso" target="_blank" rel="nofollow">Зеркало на сайте mirror.yandex.ru</a></li>
+        </ul>
+        <h2>2.2.	Дистрибутивные файлы технологической платформы «1С:Предприятие 8»</h2>
+        <ul>
+          <li><p>Дистрибутивы «1С:Предприятие» версии <b>8.3.22.1709</b>:</p>
+            <ul>
+              <li><a class="hyperlink" href="https://releases.1c.ru/version_file?nick=Platform83&amp;ver=8.3.22.1709&amp;path=Platform%5c8_3_22_1709%5cserver64_8_3_22_1709.tar.gz" title="Ссылка: https://releases.1c.ru/version_file?nick=Platform83&amp;ver=8.3.22.1709&amp;path=Platform%5c8_3_22_1709%5cserver64_8_3_22_1709.tar.gz" target="_blank" rel="nofollow">Технологическая платформа 1С:Предприятия (64-bit) для Linux</a></li>
+              <li><a class="hyperlink" href="https://releases.1c.ru/version_file?nick=Platform83&amp;ver=8.3.22.1709&amp;path=Platform%5c8_3_22_1709%5cwindows64full_8_3_22_1709.rar" title="Ссылка: https://releases.1c.ru/version_file?nick=Platform83&amp;ver=8.3.22.1709&amp;path=Platform%5c8_3_22_1709%5cwindows64full_8_3_22_1709.rar" target="_blank" rel="nofollow">Технологическая платформа 1С:Предприятия (64-bit) для Windows</a></li>
+              <li><a class="hyperlink" href="https://releases.1c.ru/version_file?nick=Platform83&amp;ver=8.3.22.1709&amp;path=Platform%5c8_3_22_1709%5cwindows_8_3_22_1709.rar" title="Ссылка: https://releases.1c.ru/version_file?nick=Platform83&amp;ver=8.3.22.1709&amp;path=Platform%5c8_3_22_1709%5cwindows_8_3_22_1709.rar" target="_blank" rel="nofollow">Технологическая платформа 1С:Предприятия для Windows</a></li>
+            </ul></li>
+          <li><a class="hyperlink" href="https://releases.1c.ru/project/Platform83" title="Ссылка: https://releases.1c.ru/project/Platform83" target="_blank" rel="nofollow">Дистрибутивы «1С:Предприятие» других версий</a></li>
+        </ul>
+        <p>Для скачивания дистрибутивов «1С:Предприятие 8» необходимы соответствующие права.</p>
+        <h2>2.3. Дистрибутивные файлы СУБД PostgreSQL</h2>
+        <ul>
+          <li><a class="hyperlink" href="https://releases.1c.ru/version_file?nick=AddCompPostgre&amp;ver=14.5-3.1C&amp;path=AddCompPostgre%5c14_5_3_1C%5cpostgresql_14.5_3.1C_amd64_deb.tar.bz2" title="Ссылка: https://releases.1c.ru/version_file?nick=AddCompPostgre&amp;ver=14.5-3.1C&amp;path=AddCompPostgre%5c14_5_3_1C%5cpostgresql_14.5_3.1C_amd64_deb.tar.bz2" target="_blank" rel="nofollow">Дистрибутив СУБД PostgreSQL версии 14.5-3.1C для Linux x86 (64-bit DEB)</a></li>
+          <li><a class="hyperlink" href="https://releases.1c.ru/additional_file?nick=AddCompPostgre&amp;path=AddCompPostgre%5cExtrafiles%5cubuntu_20.04_server.x64.tar.gz" title="Ссылка: https://releases.1c.ru/additional_file?nick=AddCompPostgre&amp;path=AddCompPostgre%5cExtrafiles%5cubuntu_20.04_server.x64.tar.gz" target="_blank" rel="nofollow">Зависимости postgres для Ubuntu 20.04-server x86_64 от 19.12.2021</a></li>
+        </ul>
+        <h2>2.4. JDBC драйвер для PostgreSQL</h2>
+        <ul>
+          <li><a class="hyperlink" href="https://jdbc.postgresql.org/download/postgresql-42.5.1.jar" title="Ссылка: https://jdbc.postgresql.org/download/postgresql-42.5.1.jar" target="_blank" rel="nofollow">PostgreSQL JDBC драйвер версии 42.5.1</a></li>
+          <li><a class="hyperlink" href="https://jdbc.postgresql.org/download/postgresql-42.5.0.jar" title="Ссылка: https://jdbc.postgresql.org/download/postgresql-42.5.0.jar" target="_blank" rel="nofollow">PostgreSQL JDBC драйвер версии 42.5.0</a></li>
+        </ul>
+        <h2>2.5.	Драйвер	защиты HASP</h2>
+        <ul>
+          <li><a class="hyperlink" href="https://www.euromobile.ru/download-center/files/Sentinel_LDK_Linux_Runtime_Installer_script.tar.gz" title="Ссылка: https://www.euromobile.ru/download-center/files/Sentinel_LDK_Linux_Runtime_Installer_script.tar.gz" target="_blank" rel="nofollow">Sentinel LDK Linux Runtime Installer версии 8.43</a></li>
+          <li><a class="hyperlink" href="http://ftp.winmentor.ro/WMEnterprise/Tools/hasp/Driver Sentinel HL/8.43/Sentinel_LDK_Ubuntu_DEB_Runtime_Installer.tar.gz" title="Ссылка: http://ftp.winmentor.ro/WMEnterprise/Tools/hasp/Driver Sentinel HL/8.43/Sentinel_LDK_Ubuntu_DEB_Runtime_Installer.tar.gz" target="_blank" rel="nofollow">Sentinel LDK Ubuntu DEB Runtime Installer версии 8.43</a></li>
+        </ul>
+        <h2>2.7. Дистрибутивы компонент технологии 1cFresh</h2>
+        <ul>
+          <li><p>Дистрибутивы компонент технологии 1cFresh версии 1.0.38:</p>
+            <ul>
+              <li><a class="hyperlink" href="https://releases.1c.ru/version_file?nick=FreshPublic&amp;ver=1.0.38.1&amp;path=SM%5c1_1_18_30%5cSM_1_1_18_30_setup1c.zip" title="Ссылка: https://releases.1c.ru/version_file?nick=FreshPublic&amp;ver=1.0.38.1&amp;path=SM%5c1_1_18_30%5cSM_1_1_18_30_setup1c.zip" target="_blank" rel="nofollow">Менеджер сервиса. Версия 1.1.18.30</a></li>
+              <li><a class="hyperlink" href="https://releases.1c.ru/version_file?nick=FreshPublic&amp;ver=1.0.38.1&amp;path=SA%5c1_1_18_3%5cSA_1_1_18_3_setup1c.zip" title="Ссылка: https://releases.1c.ru/version_file?nick=FreshPublic&amp;ver=1.0.38.1&amp;path=SA%5c1_1_18_3%5cSA_1_1_18_3_setup1c.zip" target="_blank" rel="nofollow">Агент сервиса. Версия 1.1.18.3</a></li>
+              <li><a class="hyperlink" href="https://releases.1c.ru/version_file?nick=FreshPublic&amp;ver=1.0.38.1&amp;path=AM%5c1_1_1_5%5cAM_1_1_1_5_setup1c.zip" title="Ссылка: https://releases.1c.ru/version_file?nick=FreshPublic&amp;ver=1.0.38.1&amp;path=AM%5c1_1_1_5%5cAM_1_1_1_5_setup1c.zip" target="_blank" rel="nofollow">Менеджер доступности. Версия 1.1.1.5</a></li>
+              <li><a class="hyperlink" href="https://releases.1c.ru/version_file?nick=FreshPublic&amp;ver=1.0.38.1&amp;path=SDemo%5c2_0_10_21%5cSDemo_2_0_10_21_setup1c.zip" title="Ссылка: https://releases.1c.ru/version_file?nick=FreshPublic&amp;ver=1.0.38.1&amp;path=SDemo%5c2_0_10_21%5cSDemo_2_0_10_21_setup1c.zip" target="_blank" rel="nofollow">Демонстрационное приложение «Работа в модели сервиса» версии 2.0.10.21</a></li>
+              <li><a class="hyperlink" href="https://releases.1c.ru/version_file?nick=FreshPublic&amp;ver=1.0.38.1&amp;path=ServiceGate%5c1_1_1_14%5cExtrafiles%5cappgate_1.1.1.14_all.deb" title="Ссылка: https://releases.1c.ru/version_file?nick=FreshPublic&amp;ver=1.0.38.1&amp;path=ServiceGate%5c1_1_1_14%5cExtrafiles%5cappgate_1.1.1.14_all.deb" target="_blank" rel="nofollow">Шлюз приложений версии 1.1.1.14 для Deb-based Linux-систем</a></li>
+              <li><a class="hyperlink" href="https://releases.1c.ru/version_file?nick=FreshPublic&amp;ver=1.0.38.1&amp;path=FreshSite%5c1_2_31_4%5cExtrafiles%5csite_1.2.31_4.zip" title="Ссылка: https://releases.1c.ru/version_file?nick=FreshPublic&amp;ver=1.0.38.1&amp;path=FreshSite%5c1_2_31_4%5cExtrafiles%5csite_1.2.31_4.zip" target="_blank" rel="nofollow">Сайт 1cFresh, версия 1.2.31-4</a></li>
+              <li><a class="hyperlink" href="https://releases.1c.ru/version_file?nick=FreshPublic&amp;ver=1.0.38.1&amp;path=FreshPublic%5c1_0_29_2%5cExtrafiles%5cforum_1.0.42.1.zip" title="Ссылка: https://releases.1c.ru/version_file?nick=FreshPublic&amp;ver=1.0.38.1&amp;path=FreshPublic%5c1_0_29_2%5cExtrafiles%5cforum_1.0.42.1.zip" target="_blank" rel="nofollow">Форум 1cFresh, версия 1.0.42.1</a></li>
+              <li><a class="hyperlink" href="https://releases.1c.ru/version_file?nick=FreshPublic&amp;ver=1.0.38.1&amp;path=FreshPublic%5c1_0_29_2%5cExtrafiles%5cavailability_1.1.7.zip" title="Ссылка: https://releases.1c.ru/version_file?nick=FreshPublic&amp;ver=1.0.38.1&amp;path=FreshPublic%5c1_0_29_2%5cExtrafiles%5cavailability_1.1.7.zip" target="_blank" rel="nofollow">Страница информации о недоступности, версия 1.1.7.1</a></li>
+            </ul></li>
+          <li><a class="hyperlink" href="https://releases.1c.ru/project/FreshPublic" title="Ссылка: https://releases.1c.ru/project/FreshPublic" target="_blank" rel="nofollow">Ссылки на скачивание компонент технологии 1cFresh других версий</a></li>
+        </ul>
+        <p>Для скачивания компонент технологии 1cFresh необходимы соответствующие права.</p>
+        <h2>2.8. Дистрибутивы прикладных решений фирмы «1С»</h2>
+        <p>Дистрибутивы «Управление нашей фирмой»:</p>
+        <ul>
+          <li><a class="hyperlink" href="https://releases.1c.ru/version_file?nick=SmallBusiness30&amp;ver=3.0.1.255&amp;path=SmallBusiness%5c3_0_1_255%5cSmallBusiness_3_0_1_255_setup1c.zip" title="Ссылка: https://releases.1c.ru/version_file?nick=SmallBusiness30&amp;ver=3.0.1.255&amp;path=SmallBusiness%5c3_0_1_255%5cSmallBusiness_3_0_1_255_setup1c.zip" target="_blank" rel="nofollow">Версия 3.0.1.255</a></li>
+          <li><a class="hyperlink" href="https://releases.1c.ru/version_file?nick=SmallBusiness30&amp;ver=3.0.1.216&amp;path=SmallBusiness%5c3_0_1_216%5cSmallBusiness_3_0_1_216_setup1c.zip" title="Ссылка: https://releases.1c.ru/version_file?nick=SmallBusiness30&amp;ver=3.0.1.216&amp;path=SmallBusiness%5c3_0_1_216%5cSmallBusiness_3_0_1_216_setup1c.zip" target="_blank" rel="nofollow">Версия 3.0.1.216</a></li>
+        </ul>
+        <p>Дистрибутивы «Управление нашей фирмой»:
+          <ul>
+            <li><a class="hyperlink" href="https://releases.1c.ru/version_file?nick=Accounting30&amp;ver=3.0.122.97&amp;path=Accounting%5c3_0_122_97%5cAccounting_3_0_122_97_setupt1c.zip" title="Ссылка: https://releases.1c.ru/version_file?nick=Accounting30&amp;ver=3.0.122.97&amp;path=Accounting%5c3_0_122_97%5cAccounting_3_0_122_97_setupt1c.zip" target="_blank" rel="nofollow">Версия 3.0.122.97</a></li>
+          </ul></p>
+        <h1><a name="server" id="server"></a>Глава 3. Развертывание сервера 1cFreshL.example</h1>
+        <h2>3.1. Создание виртуальной машины</h2>
+        <ul>
+          <li><a class="hyperlink" href="https://www.virtualbox.org/wiki/Downloads" title="Ссылка: https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="nofollow">Oracle VirtualBox</a></li>
+        </ul>
+        <h2>3.4. Настройка прокси-сервера для подключения к интернету</h2>
+        <ul>
+          <li><p>Cntlm Authentication Proxy:</p>
+            <ul>
+              <li><a class="hyperlink" href="https://sourceforge.net/projects/cntlm/files/" title="Ссылка: https://sourceforge.net/projects/cntlm/files/" target="_blank" rel="nofollow">дистрибутив для Windows</a></li>
+              <li><p>команда установки для Linux (Debian/Ubuntu):</p>
+                <pre>apt-get install cntlm</pre></li>
+              <li><p>команда установки для Linux (CentOS/RHEL):</p>
+                <pre>yum -y install cntlm</pre></li>
+              <li><p>Файл cntlm.ini:</p>
+                <pre><code>Allow        127.0.0.1</code>
+<code>Deny         0/0</code>
+<code></code>
+<code># Вместо ivanov надо указать имя пользователя компьютера, на котором установлена программа Cntlm</code>
+<code>Username     ivanov</code>
+<code></code>
+<code># Вместо dept99 надо указать домен корпоративной сети компьютера, на котором установлена программа Cntlm</code>
+<code>Domain       dept99</code>
+<code></code>
+<code># Вместо 10.11.12.15:8080 надо указать IP-адрес и порт прокси-сервера</code>
+<code>Proxy        10.11.12.15:8080</code>
+<code>NoProxy      localhost, 127.0.0.*, 10.*, 192.168.*</code>
+<code>Listen       3128</code>
+<code>Gateway      yes</code>
+<code></code>
+<code># Далее нужно вставить строки Auth и PassNTLMv, выданные командой cntlm -M http://ya.ru</code>
+</pre></li>
+            </ul></li>
+        </ul>
+        <h2>3.6. Средства взаимодействия с сервером 1cfreshl.example</h2>
+        <p>Разблокирование учетной записи суперпользователя</p>
+        <pre><code>sudo passwd root</code>
+</pre>
+        <p>Установка Midnight Commander</p>
+        <pre><code>apt -y install mc</code>
+</pre>
+        <p>Разрешение SSH-подключения пользователя root к серверу 1cfreshl.example</p>
+        <pre><code>sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes /g' /etc/ssh/sshd_config</code>
+<code>systemctl restart ssh</code>
+</pre>
+        <p>Ссылки для скачивания:</p>
+        <ul>
+          <li><a class="hyperlink" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" title="Ссылка: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank" rel="nofollow">PuTTY</a></li>
+          <li><a class="hyperlink" href="http://www.totalcommander.ch/win/fs/sftpplug.zip" title="Ссылка: http://www.totalcommander.ch/win/fs/sftpplug.zip" target="_blank" rel="nofollow">Плагина SFTP для Total Commander</a></li>
+          <li><a class="hyperlink" href="http://sourceforge.net/projects/corefonts/files/the%20fonts/final/" title="Ссылка: http://sourceforge.net/projects/corefonts/files/the%20fonts/final/" target="_blank" rel="nofollow">Microsoft Core Fonts (SourceForge)</a></li>
+        </ul>
+        <h2>3.7.	Служебные утилиты, шрифты и настройки</h2>
+        <p>Установка DKMS (Dynamic Kernel Module Support Framework):</p>
+        <pre><code>apt install -y dkms</code>
+</pre>
+        <p>Установка дополнений гостевой ОС (после подключения образа диска Дополнений гостевой ОС):</p>
+        <pre><code>mount /dev/cdrom /mnt</code>
+<code>cd /mnt</code>
+<code>sh ./VBoxLinuxAdditions.run</code>
+</pre>
+        <p>Настройка отображения времени:</p>
+        <pre><code>timedatectl set-ntp on</code>
+<code>timedatectl set-timezone Europe/Moscow</code>
+</pre>
+        <p>Отключение автоматических обновлений:</p>
+        <pre><code>sed -i 's/"1"/"0"/g' /etc/apt/apt.conf.d/20auto-upgrades</code>
+</pre>
+        <h2>3.8. Шрифты и библиотеки для «1С:Предприятия»</h2>
+        <p>Установка Imagemagick:</p>
+        <pre><code>apt -y install imagemagick</code>
+<code>ln -s /usr/lib/x86_64-linux-gnu/libMagickWand-6.Q16.so.6.0.0 /usr/lib/libMagickWand.so</code>
+</pre>
+        <p>Библиотеки для поддержки прикладных программ</p>
+        <pre><code>apt install -y fontconfig</code>
+<code>apt install -y libgsf-1-common</code>
+<code>apt install -y libgsf-bin</code>
+<code>apt install -y unixodbc</code>
+</pre>
+        <p>Установка шрифтов Microsoft Core Fonts:</p>
+        <pre><code>apt -y install ttf-mscorefonts-installer</code>
+<code>fc-cache -fv</code>
+</pre>
+        <h2>3.9. Установка драйвера HASP</h2>
+        <p>Создание каталога для файла драйвера:</p>
+        <pre><code>mkdir -p /1c/soft/hasp</code>
+</pre>
+        <p>После копирования в этот каталог файла драйвера нужно проверить, что к виртуальной машине 1cfreshl.example не подключены ключи защиты HASP.</p>
+        <p>И затем ввести команды:</p>
+        <pre><code>cd /1c/soft/hasp</code>
+<code>apt install -y ./*.deb</code>
+</pre>
+        <h1><a name="apache" id="apache"></a>Глава 4. Установка веб-сервера Apache</h1>
+        <h2>4.2. Установка Apache</h2>
+        <pre><code>apt -y install apache2</code>
+</pre>
+        <h2>4.5. Настройка Apache для нужд сервиса</h2>
+        <p>Остановка службы Apache:</p>
+        <pre><code>systemctl stop apache2</code>
+</pre>
+        <p>Удаление стандартных настроек Apache, создание каталогов:</p>
+        <pre><code>rm -rf /etc/apache2/*</code>
+<code>mkdir -p /etc/apache2/1cfresh.d</code>
+<code>mkdir -p /etc/apache2/conf.d</code>
+<code>mkdir -p /var/www/1cfresh</code>
+</pre>
+        <p>В каталог /etc/apache2 нужно скопировать файлы: apache2.conf, envvars, modules.conf</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\apache\etc\apache2\apache2.conf" target="_blank">apache2.conf</a></td>
+              <td>/etc/apache2</td>
+              <td>Основной файл конфигурации веб-сервера Apache</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\apache\etc\apache2\envvars" target="_blank">envvars</a></td>
+              <td>/etc/apache2</td>
+              <td>Файл конфигурации веб-сервера Apache, устанавливающий переменные окружения</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\apache\etc\apache2\modules.conf" target="_blank">modules.conf</a></td>
+              <td>/etc/apache2</td>
+              <td>Файл конфигурации веб-сервера Apache, задающий перечень подключаемых модулей</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>В каталог /etc/apache2/conf.d  нужно скопировать файлы: ports.conf, log.conf, directories.conf, ident.conf</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\apache\etc\apache2\conf.d\ports.conf" target="_blank">ports.conf</a></td>
+              <td>/etc/apache2/conf.d</td>
+              <td>Файл конфигурации веб-сервера Apache — параметры виртуальных хостов и слушаемых портов</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\apache\etc\apache2\conf.d\log.conf" target="_blank">log.conf</a></td>
+              <td>/etc/apache2/conf.d</td>
+              <td>Файл конфигурации веб-сервера Apache — параметры логирования</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\apache\etc\apache2\conf.d\directories.conf" target="_blank">directories.conf</a></td>
+              <td>/etc/apache2/conf.d</td>
+              <td>Файл конфигурации веб-сервера Apache — описание виртуальных каталогов</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\apache\etc\apache2\conf.d\ident.conf" target="_blank">ident.conf</a></td>
+              <td>/etc/apache2/conf.d</td>
+              <td>Файл конфигурации веб-сервера Apache, задающий идентификационный заголовок для логирования</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Создание символических ссылок на каталоги веб-сервера Apache:</p>
+        <pre><code>ln  -s  /var/log/apache2          /etc/apache2/logs</code>
+<code>ln  -s  /usr/lib/apache2/modules  /etc/apache2/modules</code>
+<code>ln  -s  /run/apache2              /etc/apache2/run</code>
+</pre>
+        <h2>4.6. Перезагрузка Apache</h2>
+        <pre><code>apt -y install apache2</code>
+</pre>
+        <h1><a name="postgres" id="postgres"></a>Глава 5. Установка и настройка PostgreSQL</h1>
+        <h2>5.1. Генерация локали и переменной окружения</h2>
+        <pre><code>locale-gen en_US ru_RU en_US.UTF-8 ru_RU.UTF-8</code>
+<code>export LANG=&quot;ru_RU.UTF-8&quot;</code>
+</pre>
+        <h2>5.2. Установка вспомогательных библиотек</h2>
+        <p>Создание каталога для установки вспомогательных библиотек</p>
+        <pre><code>mkdir -p /1c/soft/postgres_lib</code>
+</pre>
+        <p>Необходимо скопировать вспомогательные библиотеки для PostgreSQL в каталог /1c/soft/postgres_lib, после чего ввести команды:</p>
+        <pre><code>cd /1c/soft/postgres_lib</code>
+<code>apt install -y ./multiarch-support_2.27-3ubuntu1.2_amd64.deb</code>
+<code>apt install -y ./*.deb</code>
+</pre>
+        <h2>5.3. Установка PostgreSQL</h2>
+        <p>Создание каталога для дистрибутива PostgreSQL</p>
+        <pre><code>mkdir -p /1c/soft/postgresql</code>
+</pre>
+        <p>Необходимо скопировать дистрибутивные файлы PostgreSQL в каталог  /1c/soft/postgresql, после чего ввести команды:</p>
+        <pre><code>cd /1c/soft/postgresql</code>
+<code>apt install -y ./libpq5_14.5-3.1C_amd64.deb</code>
+<code>apt install -y ./postgresql-client-14_14.5-3.1C_amd64.deb</code>
+<code>apt install -y ./postgresql-14_14.5-3.1C_amd64.deb</code>
+<code>apt-mark hold libpq5:amd64 postgresql-14 postgresql-client-14</code>
+</pre>
+        <h2>5.4. Создание базы данных</h2>
+        <pre><code>mkdir -p /1c/db</code>
+<code>chown postgres:postgres /1c/db</code>
+<code>su - postgres -c &quot;psql -t -P format=unaligned -c 'show hba_file';&quot;</code>
+</pre>
+        <h2>5.5. Настройка PostgreSQL</h2>
+        <p>Обеспечение доверия пользователю postgres</p>
+        <pre><code>cd /etc/postgresql/14/main/</code>
+<code>sed -i 's/^\(local\s\+all\s\+postgres\s\+\)peer\b/\1trust/g' pg_hba.conf </code>
+<code>systemctl restart postgresql</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\postgres\etc\postgresql\14\main\pg_hba.conf" target="_blank">pg_hba.conf</a></td>
+              <td>/etc/postgresql/14/main</td>
+              <td>Файл параметров аутентификации пользователей СУБД PostgreSQL (перед сменой пароля пользователя postgres)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Задание пароля пользователя postgres, добавление пользователей site и forum</p>
+        <pre><code>psql -U postgres -c &quot;alter user postgres with password '12345Qwer';&quot;</code>
+<code>sed -i -e '/local\s\+all\s\+postgres\s\+trust\b/,$d' pg_hba.conf</code>
+<code>cat &gt;&gt;pg_hba.conf  &lt;&lt;EOL</code>
+<code>local    all         postgres                        peer</code>
+<code>local    all         all                             md5</code>
+<code>host     all         postgres      127.0.0.1/16      md5</code>
+<code>host     site        site          127.0.0.1/16      md5</code>
+<code>host     forum       forum         127.0.0.1/16      md5</code>
+<code>EOL</code>
+<code>systemctl restart postgresql</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\postgres\etc\postgresql\14\main\1\pg_hba.conf" target="_blank">pg_hba.conf</a></td>
+              <td>/etc/postgresql/14/main</td>
+              <td>Файл параметров аутентификации пользователей СУБД PostgreSQL</td>
+            </tr>
+          </tbody>
+        </table>
+        <h1><a name="1c" id="1c"></a>Глава 6. Установка и настройка системы «1С:Предприятие»</h1>
+        <h2>6.1. Установка «1С Предприятия 8» на сервер 1cfreshl.example</h2>
+        <p>Создание каталога  /1c/soft/1c_enterprise</p>
+        <pre><code>mkdir -p /1c/soft/1c_enterprise</code>
+</pre>
+        <p>В каталог  /1c/soft/1c_enterprise нужно скопировать дистрибутив 64-битного «1С Предприятия 8» для Linux, и затем ввести команды:</p>
+        <pre><code>cd /1c/soft/1c_enterprise</code>
+<code>chmod +x *.run</code>
+<code>./setup-full-8.3.22.1709-x86_64.run --mode unattended --enable-components server,ws,client_full,client_thin,server_admin,ru</code>
+</pre>
+        <h2>6.2. Служба сервера «1С:Предприятия»</h2>
+        <pre><code>systemctl link /opt/1cv8/x86_64/8.3.22.1709/srv1cv8-8.3.22.1709@.service</code>
+<code>systemctl enable srv1cv8-8.3.22.1709@default</code>
+<code>systemctl start srv1cv8-8.3.22.1709@default</code>
+</pre>
+        <h2>6.3.  Символическая ссылка на каталог «1С:Предприятия»</h2>
+        <pre><code>ln -s /opt/1cv8/x86_64/8.3.22.1709 /opt/1cv8/x86_64/current</code>
+</pre>
+        <h2>6.4. Настройка технологического журнала</h2>
+        <p>Файл настроек журнала</p>
+        <pre><code>mkdir -p /opt/1cv8/conf</code>
+<code>cd /opt/1cv8/conf</code>
+<code>cat &gt;logcfg.xml  &lt;&lt;EOL</code>
+<code>&lt;?xml version=&quot;1.0&quot;?&gt;</code>
+<code>&lt;config xmlns=&quot;http://v8.1c.ru/v8/tech-log&quot;&gt;</code>
+<code>   &lt;log location=&quot;/var/log/1c/logs/excp&quot; history=&quot;24&quot;&gt;</code>
+<code>      &lt;event&gt;</code>
+<code>         &lt;eq property=&quot;name&quot; value=&quot;excp&quot;/&gt;</code>
+<code>      &lt;/event&gt;</code>
+<code>      &lt;property name=&quot;all&quot;/&gt;</code>
+<code>   &lt;/log&gt;</code>
+<code>   &lt;log location=&quot;/var/log/1c/logs/vrs&quot; history=&quot;24&quot;&gt;</code>
+<code>      &lt;event&gt;</code>
+<code>         &lt;eq property=&quot;name&quot; value=&quot;vrsrequest&quot;/&gt;</code>
+<code>      &lt;/event&gt;</code>
+<code>      &lt;event&gt;</code>
+<code>         &lt;eq property=&quot;name&quot; value=&quot;vrsresponse&quot;/&gt;</code>
+<code>      &lt;/event&gt;</code>
+<code>      &lt;property name=&quot;all&quot;/&gt;</code>
+<code>   &lt;/log&gt;</code>
+<code>   &lt;dump location=&quot;/var/log/1c/dumps&quot; create=&quot;1&quot; type=&quot;3&quot;/&gt;</code>
+<code>&lt;/config&gt;</code>
+<code>EOL</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\1c\opt\1cv8\conf\logcfg.xml" target="_blank">logcfg.xml</a></td>
+              <td>/opt/1cv8/conf</td>
+              <td>Файл параметров технологического журнала и создания дампов памяти системы 1С:Предприятие</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Задание прав доступа к каталогам  технологического журнала</p>
+        <pre><code>mkdir -p /var/log/1c/logs/excp</code>
+<code>mkdir -p /var/log/1c/logs/vrs</code>
+<code>mkdir -p /var/log/1c/dumps</code>
+<code>chown -R usr1cv8:grp1cv8 /var/log/1c</code>
+<code>chmod g+rw /var/log/1c</code>
+</pre>
+        <h2>6.5. Изменение пользователя Apache</h2>
+        <pre><code>cd /etc/apache2</code>
+<code>sed -i 's/User www-data/User usr1cv8/g' apache2.conf</code>
+<code>sed -i 's/Group www-data/Group grp1cv8/g' apache2.conf</code>
+<code>sed -i 's/USER=www-data/USER=usr1cv8/g' envvars</code>
+<code>sed -i 's/GROUP=www-data/GROUP=grp1cv8/g' envvars</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\1c\etc\apache2\apache2.conf" target="_blank">apache2.conf</a></td>
+              <td>/etc/apache2</td>
+              <td>Основной файл конфигурации веб-сервера Apache (после смены пользователя службы Apache)</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\1c\etc\apache2\envvars" target="_blank">envvars</a></td>
+              <td>/etc/apache2</td>
+              <td>Файл конфигурации веб-сервера Apache, устанавливающий переменные окружения (после смены пользователя службы Apache)</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>6.6. Подключение модуля расширения веб-сервера</h2>
+        <pre><code>cd /etc/apache2/conf.d</code>
+<code>echo &quot;LoadModule _1cws_module /opt/1cv8/x86_64/current/wsap24.so&quot; &gt;  1cws.conf</code>
+<code>sed -i 's:&lt;Directory /var/www/1cfresh&gt;:g'\1\nSetHandler 1c-application\n:g' directories.conf</code>
+<code>systemctl restart apache2</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\1c\etc\apache2\conf.d\1cws.conf" target="_blank">1cws.conf</a></td>
+              <td>/etc/apache2/conf.d</td>
+              <td>Файл конфигурации веб-сервера Apache, устанавливающий модуль расширения веб-сервера 1С:Предприятия</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\1c\etc\apache2\conf.d\directories.conf" target="_blank">directories.conf</a></td>
+              <td>/etc/apache2/conf.d</td>
+              <td>Файл конфигурации веб-сервера Apache — описание виртуальных каталогов</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>6.7. Отладка на стороне сервера «1С:Предприятие 8»</h2>
+        <pre><code>systemctl stop srv1cv8-8.3.22.1709@default</code>
+<code>sed -i 's/SRV1CV8_DEBUG=$/SRV1CV8_DEBUG=-debug/g' /opt/1cv8/x86_64/current/srv1cv8-8.3.22.1709@.service</code>
+<code>systemctl start srv1cv8-8.3.22.1709@default</code>
+</pre>
+        <h2>6.8. Служба сервера администрирования RAS</h2>
+        <pre><code>systemctl link /opt/1cv8/x86_64/8.3.22.1709/ras-8.3.22.1709.service</code>
+<code>systemctl enable ras-8.3.22.1709</code>
+<code>systemctl start ras-8.3.22.1709</code>
+</pre>
+        <h2>6.9. Отображение русских названий вкладок в Google Chrome</h2>
+        <pre><code>touch /opt/1cv8/conf/ru.res</code>
+</pre>
+        <h1><a name="java" id="java"></a>Глава 7. Установка Java</h1>
+        <p>Команда для установки OpenJDK</p>
+        <pre><code>apt install -y  openjdk-8-jre</code>
+</pre>
+        <p>Полный список установленных версий Java</p>
+        <pre><code>update-alternatives --list java</code>
+</pre>
+        <h1><a name="sm" id="sm"></a>Глава 8. Установка и настройка менеджера сервиса</h1>
+        <h2>8.2. Установка лицензий на запуск системы «1С:Предприятие»</h2>
+        <p>Пример файла nethasp.ini</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\opt\1cv8\conf\nethasp.ini" target="_blank">nethasp.ini</a></td>
+              <td>/opt/1cv8/conf</td>
+              <td>Файл параметров параметров поиска клиентских лицензий 1С:Предприятие 8, выдаваемых с помощью HASP License Manager</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>8.6. Публикация менеджера сервиса</h2>
+        <p>Создание каталогов для файлов публикаций менеджера сервиса</p>
+        <pre><code>mkdir -p /var/www/1cfresh/a/adm</code>
+<code>mkdir -p /var/www/1cfresh/int/sm</code>
+</pre>
+        <p>В каталог /etc/apache2/1cfresh.d  нужно поместить файлы adm.a.conf и sm.int.conf</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\etc\apache2\1cfresh.d\adm.a.conf" target="_blank">adm.a.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внешней публикации менеджера сервиса для веб-сервера Apache</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\etc\apache2\1cfresh.d\sm.int.conf" target="_blank">sm.int.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внутренней публикации менеджера сервиса для веб-сервера Apache</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>В каталог /var/www/1cfresh/a/adm нужно поместить файл внешней публикации менеджера сервиса default.vrd</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\var\www\1cfresh\a\adm\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/adm</td>
+              <td>vrd-файл внешней публикации менеджера сервиса</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>В каталог /var/www/1cfresh/int/sm нужно поместить файл внутренней публикации менеджера сервиса default.vrd</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\var\www\1cfresh\int\sm\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/int/sm</td>
+              <td>vrd-файл внутренней публикации менеджера сервиса</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Далее нужно проверить конфигурацию Apache</p>
+        <pre><code>apachectl configtest</code>
+</pre>
+        <p>И перезапустить веб-сервер Apache:</p>
+        <pre><code>systemctl restart apache2</code>
+</pre>
+        <h2>8.7. Публикация HTTP- и веб-сервисов менеджера сервиса</h2>
+        <p>HTTP-сервис «Провайдер аутентификации»</p>
+        <pre><code>mkdir -p /var/www/1cfresh/a/oid</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\etc\apache2\1cfresh.d\oid.a.conf" target="_blank">oid.a.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внешней публикации HTTP-сервиса ПровайдерАутентификации для веб-сервера Apache</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\var\www\1cfresh\a\oid\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/oid</td>
+              <td>vrd-файл внешней публикации HTTP-сервиса ПровайдерАутентификации</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>HTTP-сервис «Передача данных»</p>
+        <pre><code>mkdir -p /var/www/1cfresh/a/datatransfer</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\etc\apache2\1cfresh.d\datatransfer.a.conf" target="_blank">datatransfer.a.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внешней публикации HTTP-сервиса ПередачаДанных для веб-сервера Apache</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\var\www\1cfresh\a\datatransfer\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/datatransfer</td>
+              <td>vrd-файл внешней публикации HTTP-сервиса ПередачаДанных</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>HTTP-сервис «Миграция приложений»</p>
+        <pre><code>mkdir -p /var/www/1cfresh/a/migration</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\etc\apache2\1cfresh.d\migration.a.conf" target="_blank">migration.a.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внешней публикации HTTP-сервиса МиграцияПриложений для веб-сервера Apache</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\var\www\1cfresh\a\migration\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/migration</td>
+              <td>vrd-файл внешней публикации HTTP-сервиса МиграцияПриложений</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>HTTP-сервис внешней регистрации</p>
+        <pre><code>mkdir -p /var/www/1cfresh/a/extreg</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\etc\apache2\1cfresh.d\extreg.a.conf" target="_blank">extreg.a.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внешней публикации HTTP-сервиса ExternalRegistration для веб-сервера Apache</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\var\www\1cfresh\a\extreg\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/extreg</td>
+              <td>vrd-файл внешней публикации HTTP-сервиса ExternalRegistration</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>HTTP-сервис быстрой активации пользователя при внешней регистрации</p>
+        <pre><code>mkdir -p /var/www/1cfresh/a/fastreg</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\etc\apache2\1cfresh.d\fastreg.a.conf" target="_blank">fastreg.a.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внешней публикации HTTP-сервиса FastExternalRegistration для веб-сервера Apache</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\var\www\1cfresh\a\fastreg\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/fastreg</td>
+              <td>vrd-файл внешней публикации HTTP-сервиса FastExternalRegistration</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>HTTP-сервис для выдачи списков приложений</p>
+        <pre><code>mkdir -p /var/www/1cfresh/a/wcib</code>
+<code>mkdir -p /var/www/1cfresh/a/wcib-noopenid</code>
+<code>mkdir -p /var/www/1cfresh/a/wcib-private</code>
+<code>mkdir -p /var/www/1cfresh/a/wcib-private-noopenid</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\etc\apache2\1cfresh.d\wcib.a.conf" target="_blank">wcib.a.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внешних публикаций веб-сервиса WebCommonInfoBases для веб-сервера Apache</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\var\www\1cfresh\a\wcib\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/wcib</td>
+              <td>vrd-файл внешней публикации HTTP-сервиса WebCommonInfoBases (анонимный доступ с OpenID)</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\var\www\1cfresh\a\wcib-noopenid\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/wcib-noopenid</td>
+              <td>vrd-файл внешней публикации HTTP-сервиса WebCommonInfoBases (анонимный доступ без OpenID)</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\var\www\1cfresh\a\wcib-private\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/wcib-private</td>
+              <td>vrd-файл внешней публикации HTTP-сервиса WebCommonInfoBases (защищенный доступ с OpenID)</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\var\www\1cfresh\a\wcib-private-noopenid\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/wcib-private-noopenid</td>
+              <td>vrd-файл внешней публикации HTTP-сервиса WebCommonInfoBases (защищенный доступ без OpenID)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>HTTP-сервис клиента открытой авторизации</p>
+        <pre><code>mkdir -p /var/www/1cfresh/a/oauth2_client</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\etc\apache2\1cfresh.d\oauth2_client.a.conf" target="_blank">oauth2_client.a.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внешней публикации HTTP-сервиса ОткрытаяАвторизацияКлиент для веб-сервера Apache</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\var\www\1cfresh\a\oauth2_client\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/oauth2_client</td>
+              <td>vrd-файл внешней публикации HTTP-сервиса ОткрытаяАвторизацияКлиент</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>HTTP-сервис управления проморассылками</p>
+        <pre><code>mkdir -p /var/www/1cfresh/a/promomail</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\etc\apache2\1cfresh.d\promomail.a.conf" target="_blank">promomail.a.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внешней публикации HTTP-сервиса PromoNewsletters для веб-сервера Apache</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\var\www\1cfresh\a\promomail\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/promomail</td>
+              <td>vrd-файл внешней публикации HTTP-сервиса PromoNewsletters</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Веб-сервис внешнего программного интерфейса для тарифов</p>
+        <pre><code>mkdir -p /var/www/1cfresh/a/tariff</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\etc\apache2\1cfresh.d\tariff.a.conf" target="_blank">tariff.a.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внешней публикации веб-сервиса TariffControl для веб-сервера Apache</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\var\www\1cfresh\a\tariff\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/tariff</td>
+              <td>vrd-файл внешней публикации веб-сервиса TariffControl</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Веб-сервис внешнего управления сеансами</p>
+        <pre><code>mkdir -p /var/www/1cfresh/int/seances</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\etc\apache2\1cfresh.d\seances.int.conf" target="_blank">seances.int.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внутренней публикации внешнего управления сеансами для веб-сервера Apache</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\sm\var\www\1cfresh\int\seances\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/int/seances</td>
+              <td>vrd-файл внутренней публикации веб-сервиса внешнего управления сеансами</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Далее нужно проверить конфигурацию Apache</p>
+        <pre><code>apachectl configtest</code>
+</pre>
+        <p>И перезапустить веб-сервер Apache:</p>
+        <pre><code>systemctl restart apache2</code>
+</pre>
+        <p>Проверка публикации HTTP-сервиса «Провайдер аутентификации»</p>
+        <pre><code>http://1cfreshl.example/a/oid/hs/oid2op</code>
+</pre>
+        <p>Проверка публикации HTTP-сервиса «Передача данных»</p>
+        <pre><code>http://1cfreshl.example/a/datatransfer/hs/dt/volume/0</code>
+</pre>
+        <p>Проверка публикации HTTP-сервиса «Миграция приложений»</p>
+        <pre><code>http://1cfreshl.example/info/hs/migration/info</code>
+</pre>
+        <p>Проверка публикации HTTP-сервиса внешней регистрации</p>
+        <pre><code>http://1cfreshl.example/a/extreg/hs/ExternalRegistration/version</code>
+</pre>
+        <p>Проверка публикации HTTP-сервиса открытой авторизации</p>
+        <pre><code>http://1cfreshl.example/a/oauth2_client/hs/oauth2_client/version</code>
+</pre>
+        <p>Проверка публикации HTTP-сервиса управления проморассылками</p>
+        <pre><code>http://1cfreshl.example/a/promomail/hs/PromoNewsletters/version</code>
+</pre>
+        <p>Проверка публикации веб-сервиса внешнего программного интерфейса для тарифов</p>
+        <pre><code>http://1cfreshl.example/a/tariff/ws/TariffControl_1_0_1_1?wsdl</code>
+</pre>
+        <p>Проверка публикации веб-сервиса внешнего управления сеансами</p>
+        <pre><code>http://1cfreshl.example:8888/int/seances/ws/SessionControl_1_0_1_2?wsdl</code>
+</pre>
+        <h1><a name="struct" id="struct"></a>Глава 9. Описание структуры сервиса</h1>
+        <h2>9.7. Регистрация менеджера сервиса</h2>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\struct\app\sm\sm.png" target="_blank">sm.png</a></td>
+              <td></td>
+              <td>Пиктограмма конфигурации «Менеджер сервиса» (для использования в менеджере сервиса)</td>
+            </tr>
+          </tbody>
+        </table>
+        <h1><a name="sa" id="sa"></a>Глава 10. Установка и настройка агента сервиса</h1>
+        <h2>10.2. Установка и настройка Xvfb</h2>
+        <p>Установка Xvfb</p>
+        <pre><code>apt install -y xvfb</code>
+</pre>
+        <p>Создание файла службы xvfb</p>
+        <pre><code>cat &gt;/etc/systemd/system/Xvfb.service &lt;&lt;EOL</code>
+<code>[Unit]</code>
+<code>Description=X Virtual Frame Buffer Service</code>
+<code>After=network.target</code>
+<code></code>
+<code>[Service]</code>
+<code>ExecStart=/usr/bin/Xvfb :99 -screen 0 1024x768x24</code>
+<code></code>
+<code>[Install]</code>
+<code>WantedBy=multi-user.target</code>
+<code>EOL</code>
+</pre>
+        <p>Запуск службы xvfb</p>
+        <pre><code>chmod +x /etc/systemd/system/Xvfb.service</code>
+<code>systemctl daemon-reload</code>
+<code>systemctl enable Xvfb.service</code>
+<code>systemctl start Xvfb.service</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sa\etc\systemd\system\Xvfb.service" target="_blank">Xvfb.service</a></td>
+              <td>/etc/systemd/system</td>
+              <td>Файл запуска запуска Xvfb как службы</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>10.3. Отключение защиты от опасных действий</h2>
+        <pre><code>echo &quot;DisableUnsafeActionProtection=.*&quot; &gt;&gt; /opt/1C/v8.3/x86_64/conf/conf.cfg</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sa\opt\1cv8\conf\conf.cfg" target="_blank">conf.cfg</a></td>
+              <td>/opt/1cv8/conf</td>
+              <td>Файл общих параметров системы 1С:Предприятие (с отключенной защитой от опасных действий)</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>10.6. Публикация агента сервиса</h2>
+        <p>Создание каталогов для файла публикации агента сервиса</p>
+        <pre><code>mkdir -p /var/www/1cfresh/int/sa</code>
+</pre>
+        <p>В каталог /etc/apache2/1cfresh.d  нужно поместить файл sa.int.conf</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sa\etc\apache2\1cfresh.d\sa.int.conf" target="_blank">sa.int.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внутренней публикации агента сервиса для веб-сервера Apache</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>В каталог /var/www/1cfresh/int/sa нужно поместить файл внутренней публикации агента сервиса default.vrd</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sa\var\www\1cfresh\int\sa\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/int/sa</td>
+              <td>vrd-файл внутренней публикации агента сервиса</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Далее нужно проверить конфигурацию Apache</p>
+        <pre><code>apachectl configtest</code>
+</pre>
+        <p>И перезапустить веб-сервер Apache:</p>
+        <pre><code>systemctl restart apache2</code>
+</pre>
+        <p>Проверка публикации агента сервиса</p>
+        <pre><code>http://1cfreshl.example:8888/int/sa/ws/InterfaceVersion?wsdl</code>
+</pre>
+        <h2>10.7. Регистрация в менеджере сервиса</h2>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sa\app\sm\sa.png" target="_blank">sa.png</a></td>
+              <td></td>
+              <td>Пиктограмма конфигурации «Агент сервиса» (для использования в менеджере сервиса)</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>10.8. Просмотр экрана агента сервиса</h2>
+        <p>Установка системы удаленного доступа к рабочему столу x11vnc</p>
+        <pre><code>apt-get install -y x11vnc</code>
+</pre>
+        <p>Запуск x11vnc как программы</p>
+        <pre><code>x11vnc -display :99</code>
+</pre>
+        <p>Создание файла для запуска x11vnc как службы</p>
+        <pre><code>cat &gt;/etc/systemd/system/x11vnc.service &lt;&lt;EOL</code>
+<code>[Unit]</code>
+<code>Description=VNC Server for X11</code>
+<code>Requires=Xvfb.service</code>
+<code>After=Xvfb.service</code>
+<code></code>
+<code>[Service]</code>
+<code>Type=forking</code>
+<code>ExecStart=/usr/bin/x11vnc -rfbport 5900 -display :99 -forever -bg -o /tmp/x11vnc.log -xkb -noxrecord -noxfixes -noxdamage -nomodtweak</code>
+<code></code>
+<code>[Install]</code>
+<code>WantedBy=multi-user.target</code>
+<code>EOL</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sa\etc\systemd\system\x11vnc.service" target="_blank">x11vnc.service</a></td>
+              <td>/etc/systemd/system</td>
+              <td>Файл запуска службы VNC сервера</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Запуск x11vnc как службы</p>
+        <pre><code>chmod +x /etc/systemd/system/x11vnc.service</code>
+<code>systemctl daemon-reload</code>
+<code>systemctl enable x11vnc.service</code>
+<code>systemctl start x11vnc.service</code>
+</pre>
+        <h1><a name="sample" id="sample"></a>Глава 11. Информационная база «Работа в модели сервиса»</h1>
+        <h2>11.7. Публикация информационной базы прикладного решения</h2>
+        <p>Создание каталогов для файлов публикаций информационной базы Работа в модели сервиса</p>
+        <pre><code>mkdir -p /var/www/1cfresh/a/sample</code>
+<code>mkdir -p /var/www/1cfresh/int/sample</code>
+</pre>
+        <p>В каталог /etc/apache2/1cfresh.d  нужно поместить файлы sample.a.conf и sample.int.conf</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sample\etc\apache2\1cfresh.d\sample.a.conf" target="_blank">sample.a.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внешней публикации информационной базы Работа в модели сервиса для веб-сервера Apache</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\sample\etc\apache2\1cfresh.d\sample.int.conf" target="_blank">sample.int.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внутренней публикации информационной базы Работа в модели сервиса для веб-сервера Apache</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>В каталог /var/www/1cfresh/a/sample нужно поместить файл внешней публикации default.vrd</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sample\var\www\1cfresh\a\sample\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/sample</td>
+              <td>vrd-файл внешней публикации информационной базы Работа в модели сервиса</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>В каталог /var/www/1cfresh/int/sample нужно поместить файл внутренней публикации default.vrd</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sample\var\www\1cfresh\int\sample\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/int/sample</td>
+              <td>vrd-файл внутренней публикации информационной базы Работа в модели сервиса</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Далее нужно проверить конфигурацию Apache</p>
+        <pre><code>apachectl configtest</code>
+</pre>
+        <p>И перезапустить веб-сервер Apache:</p>
+        <pre><code>systemctl restart apache2</code>
+</pre>
+        <p>Проверка внутренней публикации</p>
+        <pre><code>http://1cfreshl.example:8888/int/sample</code>
+</pre>
+        <p>Проверка внешней публикации (вводить логин и пароль не надо)</p>
+        <pre><code>1cfreshl.example/a/sample/0</code>
+</pre>
+        <h2>11.8. Регистрация в менеджере сервиса</h2>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sample\app\sm\sample.png" target="_blank">sample.png</a></td>
+              <td></td>
+              <td>Пиктограмма конфигурации «Работа в модели сервиса» (для использования в менеджере сервиса)</td>
+            </tr>
+          </tbody>
+        </table>
+        <h1><a name="sbm" id="sbm"></a>Глава 13. Развертывание обычных и демонстрационных баз</h1>
+        <h2>13.3. Публикация информационных баз</h2>
+        <p>Создание каталогов для файлов публикаций информационной базы Управление нашей фирмой (рабочий и демонстрационный варианты)</p>
+        <pre><code>mkdir -p /var/www/1cfresh/a/sbm</code>
+<code>mkdir -p /var/www/1cfresh/int/sbm</code>
+<code>mkdir -p /var/www/1cfresh/a/sbm_demo</code>
+<code>mkdir -p /var/www/1cfresh/int/sbm_demo</code>
+</pre>
+        <p>В каталог /etc/apache2/1cfresh.d  нужно поместить файлы sbm.a.conf,  sbm_demo.a.conf, sbm.int.conf и sbm_demo.int.conf</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sbm\etc\apache2\1cfresh.d\sbm.a.conf" target="_blank">sbm.a.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внешней публикации информационной базы Управление нашей фирмой (рабочий вариант) для веб-сервера Apache</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\sbm\etc\apache2\1cfresh.d\sbm_demo.a.conf" target="_blank">sbm_demo.a.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внешней публикации информационной базы Управление нашей фирмой (демонстрационный вариант) для веб-сервера Apache</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\sbm\etc\apache2\1cfresh.d\sbm.int.conf" target="_blank">sbm.int.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внутренней публикации информационной базы Управление нашей фирмой (рабочий вариант) для веб-сервера Apache</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\sbm\etc\apache2\1cfresh.d\sbm_demo.int.conf" target="_blank">sbm_demo.int.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внутренней публикации информационной базы Управление нашей фирмой (демонстрационный вариант) для веб-сервера Apache</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>В каталог /var/www/1cfresh/a/sbm нужно поместить файл внешней публикации информационной базы Управление нашей фирмой (рабочий вариант) default.vrd</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sbm\var\www\1cfresh\a\sbm\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/sbm</td>
+              <td>vrd-файл внешней публикации информационной базы Управление нашей фирмой (рабочий вариант)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>В каталог /var/www/1cfresh/a/sbm_demo нужно поместить файл внешней публикации информационной базы Управление нашей фирмой (демонстрационный вариант) default.vrd</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sbm\var\www\1cfresh\a\sbm_demo\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/sbm_demo</td>
+              <td>vrd-файл внешней публикации информационной базы Управление нашей фирмой (демонстрационный вариант)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>В каталог /var/www/1cfresh/int/sbm нужно поместить файл внутренней публикации информационной базы Управление нашей фирмой (рабочий вариант) default.vrd</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sbm\var\www\1cfresh\int\sbm\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/int/sbm</td>
+              <td>vrd-файл внутренней публикации информационной базы Управление нашей фирмой (рабочий вариант)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>В каталог /var/www/1cfresh/int/sbm_demo нужно поместить файл внутренней публикации информационной базы Управление нашей фирмой (демонстрационный вариант) default.vrd</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sbm\var\www\1cfresh\int\sbm_demo\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/int/sbm_demo</td>
+              <td>vrd-файл внутренней публикации информационной базы Управление нашей фирмой (демонстрационный вариант)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Далее нужно проверить конфигурацию Apache</p>
+        <pre><code>apachectl configtest</code>
+</pre>
+        <p>И перезапустить веб-сервер Apache:</p>
+        <pre><code>systemctl restart apache2</code>
+</pre>
+        <h2>13.5. Регистрация информационных баз</h2>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sbm\app\sm\sbm.png" target="_blank">sbm.png</a></td>
+              <td></td>
+              <td>Пиктограмма конфигурации «Управление нашей фирмой» (для использования в менеджере сервиса)</td>
+            </tr>
+          </tbody>
+        </table>
+        <h1><a name="ea" id="ea"></a>Глава 14. Установка «Бухгалтерии предприятия»</h1>
+        <h2>14.3. Публикация информационной базы</h2>
+        <p>Создание каталогов для файлов публикаций информационной базы Бухгалтерия предприятия</p>
+        <pre><code>mkdir -p /var/www/1cfresh/a/ea</code>
+<code>mkdir -p /var/www/1cfresh/int/ea</code>
+</pre>
+        <p>В каталог /etc/apache2/1cfresh.d  нужно поместить файлы ea.a.conf и ea.int.conf</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\ea\etc\apache2\1cfresh.d\ea.a.conf" target="_blank">ea.a.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внешней публикации информационной базы Бухгалтерия предприятия для веб-сервера Apache</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\ea\etc\apache2\1cfresh.d\ea.int.conf" target="_blank">ea.int.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внутренней публикации информационной базы Бухгалтерия предприятия для веб-сервера Apache</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>В каталог /var/www/1cfresh/a/ea нужно поместить файл внешней публикации default.vrd</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\ea\var\www\1cfresh\a\ea\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/ea</td>
+              <td>vrd-файл внешней публикации информационной базы Бухгалтерия предприятия</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>В каталог /var/www/1cfresh/int/ea нужно поместить файл внутренней публикации default.vrd</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\ea\var\www\1cfresh\int\ea\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/int/ea</td>
+              <td>vrd-файл внутренней публикации информационной базы Бухгалтерия предприятия</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>14.4. Регистрация в менеджере сервиса</h2>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\ea\app\sm\ea.png" target="_blank">ea.png</a></td>
+              <td></td>
+              <td>Пиктограмма конфигурации «Бухгалтерия предприятия» (для использования в менеджере сервиса)</td>
+            </tr>
+          </tbody>
+        </table>
+        <h1><a name="mail" id="mail"></a>Глава 15. Настройка электронной почты</h1>
+        <h2>15.1. Настройка собственного почтового сервера</h2>
+        <p>Установка postfix</p>
+        <pre><code>echo &quot;postfix postfix/mailname string postmaster.1cfresh.example&quot; | debconf-set-selections</code>
+<code>echo &quot;postfix postfix/main_mailer_type string 'Internet Site'&quot; | debconf-set-selections</code>
+<code>apt install -y postfix </code>
+</pre>
+        <p>Настройка postfix</p>
+        <pre><code>postconf -e 'inet_interfaces = 127.0.0.1'</code>
+<code>postconf -e 'virtual_alias_maps = regexp:/etc/postfix/virtual'</code>
+<code>postconf -e 'virtual_alias_domains ='</code>
+<code>echo '/.*/  root' &gt; /etc/postfix/virtual</code>
+<code>postmap /etc/postfix/virtual</code>
+<code>sed -i 's/^smtp\s\+inet/1025     inet/g' /etc/postfix/master.cf</code>
+</pre>
+        <p>Перезагрузка postfix</p>
+        <pre><code>systemctl restart postfix</code>
+</pre>
+        <p>Установка почтового клиента mutt</p>
+        <pre><code>apt install -y mutt</code>
+</pre>
+        <h1><a name="files" id="files"></a>Глава 16. Перемещение файлов из менеджера сервиса в том</h1>
+        <h2>16.1. Каталог для хранения файлов менеджера сервиса</h2>
+        <p>Создание каталога</p>
+        <pre><code>mkdir -p /1c/sm_storage</code>
+</pre>
+        <p>Настройка прав на каталог</p>
+        <pre><code>chown -R usr1cv8:grp1cv8 /1c/sm_storage</code>
+<code>chmod g+rw /1c/sm_storage</code>
+</pre>
+        <h1><a name="syncro" id="syncro"></a>Глава 18. Синхронизация данных в сервисе</h1>
+        <h2>18.2. Создание каталога обмена</h2>
+        <p>Создание каталога</p>
+        <pre><code>mkdir -p /1c/exchange</code>
+</pre>
+        <p>Настройка прав на каталог</p>
+        <pre><code>chown -R usr1cv8:grp1cv8 /1c/exchange/</code>
+</pre>
+        <h1><a name="cert_gen" id="cert_gen"></a>Глава 19. Генерация сертификата</h1>
+        <h2>19.1. Скрипт для генерации сертификата</h2>
+        <p>Создание каталогов</p>
+        <pre><code>mkdir -p /1c/cert</code>
+<code>mkdir -p /etc/pki-custom</code>
+</pre>
+        <p>Скрипт данных сертификата</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\cert_gen\1c\cert\1cfreshl.data.sh" target="_blank">1cfreshl.data.sh</a></td>
+              <td>/1c/cert</td>
+              <td>Данные SSL-сертификата для домена 1cfreshl.example</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Скрипты для работы с сертификатами</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\cert_gen\1c\cert\add_certificate.sh" target="_blank">add_certificate.sh</a></td>
+              <td>/1c/cert</td>
+              <td>Скрипт генерации SSL-сертификата и добавления его в хранилища сертификатов ОС и Java</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\cert_gen\1c\cert\remove_certificate.sh" target="_blank">remove_certificate.sh</a></td>
+              <td>/1c/cert</td>
+              <td>Скрипт удаления SSL-сертификата из  хранилищ сертификатов ОС и Java</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\cert_gen\1c\cert\view_certificate.sh" target="_blank">view_certificate.sh</a></td>
+              <td>/1c/cert</td>
+              <td>Скрипт просмотра данных SSL-сертификата</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>19.2. Выполнение генерации сертификата</h2>
+        <p>Помечаем sh-файлы в каталоге /1c/cert как исполняемые</p>
+        <pre><code>chmod +x /1c/cert/*.sh</code>
+</pre>
+        <p>Генерация сертификата для домена 1cfreshl.example</p>
+        <pre><code>/1c/cert/add_certificate.sh 1cfreshl</code>
+</pre>
+        <p>Проверка генерации сертификата для домена 1cfreshl.example</p>
+        <pre><code>ls -1 /etc/pki-custom/1cfreshl.example</code>
+<code>/1c/cert/view_certificate.sh 1cfreshl</code>
+</pre>
+        <p>Повторная генерация сертификата для домена 1cfreshl.example (при необходимости)</p>
+        <pre><code>/1c/cert/remove_certificate.sh 1cfreshl</code>
+<code>/1c/cert/add_certificate.sh 1cfreshl</code>
+</pre>
+        <h1><a name="nginx" id="nginx"></a>Глава 20. Установка фронтенд сервера NGINX</h1>
+        <h2>20.1. Установка NGINX</h2>
+        <pre><code>systemctl stop apache2</code>
+<code>apt install -y nginx</code>
+</pre>
+        <h2>20.2. Проверка установки</h2>
+        <p>Проверка службы NGINX</p>
+        <pre><code>systemctl status nginx</code>
+</pre>
+        <p>Проверка состояния порта 80</p>
+        <pre><code>netstat -tlnp | grep :80</code>
+</pre>
+        <p>Проверка работоспособности веб-сервера NGINX</p>
+        <pre><code>sed -i 's:index\.html\s+index\.htm\s+index\.nginx-debian\.html:index.nginx-debian.html index.html index.htm:g' /etc/nginx/sites-available/default</code>
+<code>systemctl reload nginx</code>
+</pre>
+        <p>И затем ввести в адресной строке браузера адрес:</p>
+        <pre><code>http://1cfreshl.example/</code>
+</pre>
+        <p>Остановка NGINX</p>
+        <pre><code>systemctl stop nginx</code>
+</pre>
+        <p>Запуск Apache</p>
+        <pre><code>systemctl start apache2</code>
+</pre>
+        <h2>20.4. Настройка NGINX</h2>
+        <p>Удаление имеющихся конфигурационных файлов NGINX, кроме mime.types</p>
+        <pre><code>cd /etc/nginx</code>
+<code>rm -rf ./*/</code>
+<code>rm -f !(mime.types)</code>
+</pre>
+        <p>Создание подкаталогов в каталоге /etc/nginx</p>
+        <pre><code>mkdir include</code>
+<code>mkdir upstreams</code>
+<code>mkdir vhosts</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\nginx\etc\nginx\mime.types" target="_blank">mime.types</a></td>
+              <td>/etc/nginx</td>
+              <td>Файл конфигурации NGINX — задание типов MIME</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>20.5. Основной файл конфигурации</h2>
+        <p>Основной файл конфигурации NGINX находится в каталоге /etc/nginx и называется nginx.conf</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\nginx\etc\nginx\nginx.conf" target="_blank">nginx.conf</a></td>
+              <td>/etc/nginx</td>
+              <td>Основной файл конфигурации NGINX</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>20.6. Настройки обработки входящих соединений</h2>
+        <p>В каталоге /etc/nginx/vhosts хранятся файлы описывающие обработки входящих соединений NGINX</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\nginx\etc\nginx\vhosts\1cfreshl.example.conf" target="_blank">1cfreshl.example.conf</a></td>
+              <td>/etc/nginx/vhosts</td>
+              <td>Файл конфигурации NGINX — обработка входящих HTTP-запросов к домену 1cfresh.example</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\nginx\etc\nginx\vhosts\1cfreshl.example-ssl.conf" target="_blank">1cfreshl.example-ssl.conf</a></td>
+              <td>/etc/nginx/vhosts</td>
+              <td>Файл конфигурации NGINX — обработка входящих HTTPS-запросов к домену 1cfresh.example</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>20.7. Настройка обращений к проксируемым серверам</h2>
+        <p>В каталоге /etc/nginx/upstreams расположены файлы, описывающие направления, по которым NGINX перенаправляет входящие запросы</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\nginx\etc\nginx\upstreams\upstream-node-01.conf" target="_blank">upstream-node-01.conf</a></td>
+              <td>/etc/nginx/upstreams</td>
+              <td>Файл конфигурации NGINX — перенаправление запросов  на ноду с менеджером сервиса</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\nginx\etc\nginx\upstreams\upstream-gate.conf" target="_blank">upstream-gate.conf</a></td>
+              <td>/etc/nginx/upstreams</td>
+              <td>Файл конфигурации NGINX — перенаправление запросов  на шлюз приложений</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\nginx\etc\nginx\upstreams\upstream-openid.conf" target="_blank">upstream-openid.conf</a></td>
+              <td>/etc/nginx/upstreams</td>
+              <td>Файл конфигурации NGINX — перенаправление запросов  на ноду с провайдером аутентификации</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\nginx\etc\nginx\upstreams\upstream-site.conf" target="_blank">upstream-site.conf</a></td>
+              <td>/etc/nginx/upstreams</td>
+              <td>Файл конфигурации NGINX — перенаправление запросов  на сайт сервиса (витрину 1cfresh.example)</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\nginx\etc\nginx\upstreams\upstream-forum.conf" target="_blank">upstream-forum.conf</a></td>
+              <td>/etc/nginx/upstreams</td>
+              <td>Файл конфигурации NGINX — перенаправление запросов  на форум сервиса</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\nginx\etc\nginx\upstreams\upstream-am.conf" target="_blank">upstream-am.conf</a></td>
+              <td>/etc/nginx/upstreams</td>
+              <td>Файл конфигурации NGINX — перенаправление запросов  на менеджер доступности</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\nginx\etc\nginx\upstreams\upstream-availability.conf" target="_blank">upstream-availability.conf</a></td>
+              <td>/etc/nginx/upstreams</td>
+              <td>Файл конфигурации NGINX — перенаправление запросов  на страницу недоступности витрины 1cfreshl.example</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>20.8. Вспомогательные файлы настроек</h2>
+        <p>В каталог /etc/nginx/include хранятся вспомогательные файлы настроек</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\nginx\etc\nginx\include\1c_common.conf" target="_blank">1c_common.conf</a></td>
+              <td>/etc/nginx/include</td>
+              <td>Файл конфигурации NGINX — общие настройки таймаутов и заголовков обрабатываемых запросов</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\nginx\etc\nginx\include\1c_app.conf" target="_blank">1c_app.conf</a></td>
+              <td>/etc/nginx/include</td>
+              <td>Файл конфигурации NGINX — обработка запросов к 1C-приложениям</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\nginx\etc\nginx\include\1c_keepalive.conf" target="_blank">1c_keepalive.conf</a></td>
+              <td>/etc/nginx/include</td>
+              <td>Файл конфигурации NGINX — задание режима keepalive для обработки запроса</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\nginx\etc\nginx\include\1c_error.conf" target="_blank">1c_error.conf</a></td>
+              <td>/etc/nginx/include</td>
+              <td>Файл конфигурации NGINX — режимы обработки ошибок для зарпосов к 1С-приложениям</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\nginx\etc\nginx\include\1c_error_403.conf" target="_blank">1c_error_403.conf</a></td>
+              <td>/etc/nginx/include</td>
+              <td>Файл конфигурации NGINX — выдача страницы недоступности для запросов, на которые был выдан HTTP код состояния 403</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\nginx\etc\nginx\include\1c_error_site.conf" target="_blank">1c_error_site.conf</a></td>
+              <td>/etc/nginx/include</td>
+              <td>Файл конфигурации NGINX — режимы обработки ошибок при обращении к страницам сайта и форума</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\nginx\etc\nginx\include\1c_error_auth.conf" target="_blank">1c_error_auth.conf</a></td>
+              <td>/etc/nginx/include</td>
+              <td>Файл конфигурации NGINX — режимы обработки ошибок при обращении к страницам сайта и форума, требующим аутентификации</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\nginx\etc\nginx\include\1c_site_auth.conf" target="_blank">1c_site_auth.conf</a></td>
+              <td>/etc/nginx/include</td>
+              <td>Файл конфигурации NGINX — проверка аутентификации при обращении к страницам сайта (мастеру настройки и панели администрирования)</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\nginx\etc\nginx\include\1c_forum_auth.conf" target="_blank">1c_forum_auth.conf</a></td>
+              <td>/etc/nginx/include</td>
+              <td>Файл конфигурации NGINX — проверка аутентификации при обращении к мастеру настройки форума</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\nginx\etc\nginx\include\1c_sm_http.conf" target="_blank">1c_sm_http.conf</a></td>
+              <td>/etc/nginx/include</td>
+              <td>Файл конфигурации NGINX — режимы обработки обращений к HTTP-сервисам менеджера сервиса</td>
+            </tr>
+          </tbody>
+        </table>
+        <h1><a name="nginx_set" id="nginx_set"></a>Глава 21. Изменение настроек сервиса для запуска NGINX</h1>
+        <h2>21.1. Изменение перечня портов, обрабатываемых Apache</h2>
+        <p>Команды для изменения файла ports.conf</p>
+        <pre><code>sed -i 's/\b80\b/8889/g' /etc/apache2/conf.d/ports.conf</code>
+<code>systemctl restart apache2</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\nginx_set\etc\apache2\conf.d\ports.conf" target="_blank">ports.conf</a></td>
+              <td>/etc/apache2/conf.d</td>
+              <td>Файл конфигурации веб-сервера Apache — параметры виртуальных хостов и слушаемых портов</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Проверка, что веб-сервер Apache «слушает» порт 8889</p>
+        <pre><code>lsof -i :8889</code>
+</pre>
+        <p>Проверка, что веб-сервер Apache «слушает» порт 8889</p>
+        <pre><code>lsof -i :8889</code>
+</pre>
+        <h2>21.3. Пользователь NGINX</h2>
+        <p>Команда для создания пользователя  NGINX</p>
+        <pre><code>adduser --system --no-create-home --disabled-login --disabled-password --group nginx</code>
+</pre>
+        <h2>21.4. Необходимые файлы</h2>
+        <p>Cоздание файлов паролей для администрирования сайта и форума</p>
+        <pre><code>mkdir -p /etc/nginx/password/site</code>
+<code>mkdir -p /etc/nginx/password/forum</code>
+<code>htpasswd -cmb /etc/nginx/password/site/.htpasswd admin 12345Qwer</code>
+<code>htpasswd -cmb /etc/nginx/password/forum/.htpasswd admin 12345Qwer</code>
+</pre>
+        <p>Задание прав на файлы паролей</p>
+        <pre><code>chown -R root:nginx /etc/nginx/password</code>
+<code>chmod -R 640 /etc/nginx/password</code>
+<code>find /etc/nginx/password -type d -exec chmod 750 {} +</code>
+</pre>
+        <p>Проверка, что пользователь nginx может читать файлы паролей</p>
+        <pre><code>sudo -u nginx stat /etc/nginx/password/site/.htpasswd</code>
+</pre>
+        <p>Проверка, что пользователь fresh не может читать файлы паролей</p>
+        <pre><code>sudo -u fresh stat /etc/nginx/password/site/.htpasswd</code>
+</pre>
+        <p>Получение файла favicon.ico</p>
+        <pre><code>mkdir -p /var/www/1cfreshl.example</code>
+<code>cd /var/www/1cfreshl.example</code>
+<code>curl https://1cfresh.com/favicon.ico --output favicon.ico</code>
+</pre>
+        <h2>21.5. Проверка конфигурации NGINX</h2>
+        <pre><code>nginx -t</code>
+</pre>
+        <h2>21.6. Запуск NGINX</h2>
+        <pre><code>systemctl start nginx</code>
+</pre>
+        <p>Проверка работоспособности NGINX — ввеести в адресной строке браузера на хост-компьютере адрес</p>
+        <pre><code>http://1cfreshl.example</code>
+</pre>
+        <h2>21.7. Проверка запуска информационных баз</h2>
+        <p>Ввести в адресной строке браузера на хост-компьютере адрес:</p>
+        <pre><code>http://1cfreshl.example/a/adm</code>
+</pre>
+        <h1><a name="web_cert" id="web_cert"></a>Глава 22. Установка сертификата для браузера</h1>
+        <h2>22.3. Google Chrome для Linux</h2>
+        <p>Импорт сертификата</p>
+        <pre><code>sudo apt install -y libnss3-tools</code>
+<code>certutil -A -d sql:$HOME/.pki/nssdb -t &quot; CT,c,c&quot; -n 1cfreshl.example -i $HOME/Downloads/1cfreshl.example.crt</code>
+</pre>
+        <p>Проверка установки сертификата</p>
+        <pre><code>certutil -L -d sql$HOME/.pki/nssdb</code>
+</pre>
+        <h1><a name="openid" id="openid"></a>Глава 23. OpenID-аутентификация</h1>
+        <h2>23.2. Изменения во внешних публикациях</h2>
+        <p>Приведенные ниже строки следует вставить в файлы default.vrd, расположенные в подкаталогах adm, sample, sbm, sbm_demo, ea каталога /var/www/1cfresh</p>
+        <pre><code>   &lt;openid&gt;</code>
+<code>     &lt;rely url=&quot;https://1cfreshl.example/a/openid/e1cib/oid2op&quot; /&gt;</code>
+<code>   &lt;/openid&gt;</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\openid\var\www\1cfresh\a\adm\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/adm</td>
+              <td>vrd-файл внешней публикации менеджера сервиса</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\openid\var\www\1cfresh\a\sample\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/sample</td>
+              <td>vrd-файл внешней публикации информационной базы Работа в модели сервиса</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\openid\var\www\1cfresh\a\sbm\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/sbm</td>
+              <td>vrd-файл внешней публикации информационной базы Управление нашей фирмой (рабочий вариант)</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\openid\var\www\1cfresh\a\sbm_demo\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/sbm_demo</td>
+              <td>vrd-файл внешней публикации информационной базы Управление нашей фирмой (демонстрационный вариант)</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\openid\var\www\1cfresh\a\ea\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/ea</td>
+              <td>vrd-файл внешней публикации информационной базы Бухгалтерия предприятия</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>23.3. Перезапуск Apache</h2>
+        <p>Проверка конфигурации Apache</p>
+        <pre><code>apachectl configtest</code>
+</pre>
+        <p>Перезапуск веб-сервера Apache:</p>
+        <pre><code>systemctl restart apache2</code>
+</pre>
+        <h2>23.6. Проверка OpenID-аутентификации</h2>
+        <p>Ввести в адресной строке браузера на хост-компьютере адрес:</p>
+        <pre><code>http://1cfreshl.example/a/adm</code>
+</pre>
+        <p>Должно произойти перенаправление на адрес https://1cfreshl.example/a/openid/e1cib/oid2op. В окне браузера должен появиться запрос аутентификации пользователя С заголовком &quot;1С:Предприятие через Интернет&quot;</p>
+        <h1><a name="gate" id="gate"></a>Глава 24. Шлюз приложений</h1>
+        <h2>24.1. Установка и настройка шлюза</h2>
+        <p>Создание каталога для дистрибутива шлюза</p>
+        <pre><code>mkdir -p /1c/soft/appgate</code>
+</pre>
+        <p>deb-файл шлюза следует поместить в каталог /1с/soft/appgate</p>
+        <p>Установка шлюза</p>
+        <pre><code>apt install -y /1c/soft/appgate/*.deb</code>
+</pre>
+        <p>Проверка установки (просмотр каталога файлов шлюза)</p>
+        <pre><code>ls -1 /opt/1C/1cfresh/appgate</code>
+</pre>
+        <p>Просмотр файла настроек шлюза</p>
+        <pre><code>cat /opt/1C/1cfresh/appgate/settings/appgatesettings.xml</code>
+</pre>
+        <p>Запуск шлюза</p>
+        <pre><code>systemctl start appgate</code>
+</pre>
+        <h2>24.2. Пользователь шлюза</h2>
+        <p>Создание пользователя шлюза</p>
+        <pre><code>cd /opt/1C/1cfresh/appgate</code>
+<code>./setAuth.sh gateuser 12345Qwer</code>
+</pre>
+        <h2>24.9. Изменение настроек NGINX</h2>
+        <p>Команды для изменения настроек NGINX</p>
+        <pre><code>sed -i 's/8889/8080/g' /etc/nginx/upstreams/upstream-gate.conf</code>
+<code>systemctl restart nginx</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\gate\etc\nginx\upstreams\upstream-gate.conf" target="_blank">upstream-gate.conf</a></td>
+              <td>/etc/nginx/upstreams</td>
+              <td>Файл конфигурации NGINX — перенаправление запросов  на шлюз приложений</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>24.10. Проверка функционирования шлюза</h2>
+        <p>Запуск приложения Работа в модели сервиса — в адресной строке браузера на хост-компьютере нужно ввести адрес:</p>
+        <pre><code>https://1cfreshl.example/a/sample/1</code>
+</pre>
+        <p>Выключить шлюз командой:</p>
+        <pre><code>systemctl stop appgate</code>
+</pre>
+        <p>Теперь при попытке запустить приложение Работа в модели сервиса, введя в браузере адрес</p>
+        <pre><code>https://1cfreshl.example/a/sample/1</code>
+</pre>
+        <p>В браузере должно быть выдано сообщение 404 Not Found</p>
+        <p>После включения шлюза командой:</p>
+        <pre><code>systemctl start appgate</code>
+</pre>
+        <p>приложения сервиса должны запускаться, как положено.</p>
+        <h1><a name="caddress" id="caddress"></a>Глава 25. Использование приложений с общим внешним адресом</h1>
+        <h2>25.1. Изменение настроек Apache</h2>
+        <p>В файл /etc/apache2/conf.d/ports.conf нужно добавить директиву:</p>
+        <pre><code>Listen 8890</code>
+</pre>
+        <p>и блок:</p>
+        <pre><code>&lt;VirtualHost *:8890&gt;</code>
+<code>    ServerName srvweb2</code>
+<code>    DocumentRoot /var/www/1cfresh2</code>
+<code>    IncludeOptional 1cfresh.d/*.a2.conf</code>
+<code>&lt;/VirtualHost&gt;</code>
+</pre>
+        <p>В файл /etc/apache2/conf.d/directories.conf нужно добавить блок:</p>
+        <pre><code>&lt;Directory /var/www/1cfresh2&gt;</code>
+<code>    SetHandler 1c-application</code>
+<code>&lt;/Directory&gt;</code>
+</pre>
+        <p>Создать каталог /var/www/1cfresh2/a командой:</p>
+        <pre><code>mkdir -p /var/www/1cfresh2/a</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\caddress\etc\apache2\conf.d\ports.conf" target="_blank">ports.conf</a></td>
+              <td>/etc/apache2/conf.d</td>
+              <td>Файл конфигурации веб-сервера Apache — параметры виртуальных хостов и слушаемых портов</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\caddress\etc\apache2\conf.d\directories.conf" target="_blank">directories.conf</a></td>
+              <td>/etc/apache2/conf.d</td>
+              <td>Файл конфигурации веб-сервера Apache — описание виртуальных каталогов</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>25.3. Публикация информационной базы</h2>
+        <p>Поместить в каталог /etc/apache2/1cfresh.d файлы sample.a2.conf и sample_2.int.conf</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\caddress\etc\apache2\1cfresh.d\sample.a2.conf" target="_blank">sample.a2.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внешней публикации информационной базы Работа в модели сервиса 2 для веб-сервера Apache</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\caddress\etc\apache2\1cfresh.d\sample_2.int.conf" target="_blank">sample_2.int.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внутренней публикации информационной базы Работа в модели сервиса 2 для веб-сервера Apache</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Создать каталог /var/www/1cfresh2/a/sample командой:</p>
+        <pre><code>mkdir -p /var/www/1cfresh2/a/sample</code>
+</pre>
+        <p>Поместить в этот каталог файл описания внешней публикации информационной базы</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\caddress\var\www\1cfresh2\a\sample\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh2/a/sample</td>
+              <td>vrd-файл внешней публикации информационной базы Работа в модели сервиса 2</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Создать каталог /var/www/1cfresh2/a/sample командой:</p>
+        <pre><code>mkdir -p /var/www/1cfresh2/int/sample_2</code>
+</pre>
+        <p>Поместить в этот каталог файл описания внутренней публикации информационной базы</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\caddress\var\www\1cfresh\int\sample_2\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/int/sample_2</td>
+              <td>vrd-файл внутренней публикации информационной базы Работа в модели сервиса 2</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Далее нужно проверить конфигурацию Apache</p>
+        <pre><code>apachectl configtest</code>
+</pre>
+        <p>И перезапустить веб-сервер Apache:</p>
+        <pre><code>systemctl restart apache2</code>
+</pre>
+        <h1><a name="gatecheck" id="gatecheck"></a>Глава 26. Контроль доступности шлюза приложений</h1>
+        <h2>26.2. Публикации тестера шлюза приложений</h2>
+        <p>Добавить в каталог /etc/apache2/1cfresh.d файлы agt.a.conf и agt.a2.conf</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\gatecheck\etc\apache2\1cfresh.d\agt.a.conf" target="_blank">agt.a.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание публикации № 1 тестера шлюза приложений для веб-сервера Apache</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\gatecheck\etc\apache2\1cfresh.d\agt.a2.conf" target="_blank">agt.a2.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание публикации № 2 тестера шлюза приложений для веб-сервера Apache</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Создать каталог var/www/1cfresh/a/agt командой:</p>
+        <pre><code>mkdir -p /var/www/1cfresh/a/agt</code>
+</pre>
+        <p>И поместить туда файл default.vrd:</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\gatecheck\var\www\1cfresh\a\agt\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/agt</td>
+              <td>vrd-файл внешней публикации приложения № 1 тестера шлюза приложений</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Создать каталог var/www/1cfresh2/a/agt командой:</p>
+        <pre><code>mkdir -p /var/www/1cfresh2/a/agt</code>
+</pre>
+        <p>И поместить туда файл default.vrd:</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\gatecheck\var\www\1cfresh2\a\agt\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh2/a/agt</td>
+              <td>vrd-файл внешней публикации приложения № 2 тестера шлюза приложений</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Далее нужно проверить конфигурацию Apache</p>
+        <pre><code>apachectl configtest</code>
+</pre>
+        <p>И перезапустить веб-сервер Apache:</p>
+        <pre><code>systemctl restart apache2</code>
+</pre>
+        <h2>26.6. Проверка публикации веб-сервиса тестирования</h2>
+        <pre><code>http://1cfreshl.example:8080/a/agt/1/ws/AppGateTest?wsdl</code>
+</pre>
+        <h1><a name="sitebase" id="sitebase"></a>Глава 27. Инфраструктура для сайта и форума</h1>
+        <h2>27.1. Установка Apache Tomcat 7</h2>
+        <p>Скопировать в каталог /opt сервера 1cfreshl.example файл дистрибутива Apache Tomcat 7 и ввести команды:</p>
+        <pre><code>cd /opt</code>
+<code>tar -xvzf *.tar.gz</code>
+<code>rm -f *.tar.gz</code>
+<code>mv apache-tomcat* tomcat7</code>
+</pre>
+        <h2>27.2. Пользователь Apache Tomcat</h2>
+        <p>Создание служебного пользователя tomcat</p>
+        <pre><code>adduser --system --no-create-home --disabled-login --disabled-password --group tomcat</code>
+</pre>
+        <p>Задание прав пользователя tomcat на каталог /opt/tomcat7</p>
+        <pre><code>chown -R tomcat:tomcat /opt/tomcat7</code>
+</pre>
+        <h2>27.4. Установка драйвера JDBC</h2>
+        <p>Скопировать в каталог /opt/tomcat7/lib сервера 1cfreshl.example файл JDBC драйвера для PostgreSQL (postgresql-42.5.0.jar)</p>
+        <h2>27.5. Настройка Apache Tomcat</h2>
+        <p>Поместить  в каталог /etc/systemd/system  сервера 1cfreshl.example файл tomcat7.service</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sitebase\etc\systemd\system\tomcat7.service" target="_blank">tomcat7.service</a></td>
+              <td>/etc/systemd/system</td>
+              <td>Файл запуска службы Apache Tomcat</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>И ввести команды</p>
+        <pre><code>chmod +x /etc/systemd/system/tomcat7.service</code>
+<code>systemctl daemon-reload</code>
+</pre>
+        <p>Далее нужно настроить файл server.xml, расположенный в каталоге /opt/tomcat7/conf</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\sitebase\opt\tomcat7\conf\server.xml" target="_blank">server.xml</a></td>
+              <td>/opt/tomcat7/conf</td>
+              <td>Файл параметров Apache Tomcat server.xml</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>И проверить файлы конфигурации Apache Tomcat</p>
+        <pre><code>/opt/tomcat7/bin/configtest.sh</code>
+</pre>
+        <h2>27.6. Запуск Apache Tomcat</h2>
+        <pre><code>systemctl enable tomcat7</code>
+<code>systemctl start tomcat7</code>
+</pre>
+        <h2>27.7. Проверка работоспособности Apache Tomcat</h2>
+        <p>В адресной строке браузера на хост-компьютере нужно ввести адреса:</p>
+        <pre><code>https://1cfreshl.example</code>
+<code>http://1cfreshl.example:8000</code>
+</pre>
+        <h1><a name="site" id="site"></a>Глава 28. Установка сайта</h1>
+        <h2>28.1. База данных сайта</h2>
+        <p>Создание базы данных PostgreSQL для сайта с именем site</p>
+        <pre><code>su - postgres</code>
+<code>psql</code>
+<code>CREATE DATABASE site ENCODING='UTF8' LC_CTYPE='ru_RU.UTF-8';</code>
+<code>CREATE USER site WITH PASSWORD '12345Qwer';</code>
+<code>ALTER DATABASE site OWNER TO site;</code>
+<code>GRANT ALL PRIVILEGES ON DATABASE site TO site;</code>
+<code>\q</code>
+</pre>
+        <p>Проверка наличия языка PL/pgSQL</p>
+        <pre><code>psql -U site</code>
+<code>\connect site</code>
+<code>SELECT lanname FROM pg_language;</code>
+<code>\q</code>
+<code>exit</code>
+</pre>
+        <h2>28.2. Изменение настроек Apache Tomcat</h2>
+        <pre><code>su - postgres</code>
+<code>psql</code>
+<code>CREATE DATABASE site ENCODING='UTF8' LC_CTYPE='ru_RU.UTF-8';</code>
+<code>CREATE USER site WITH PASSWORD '12345Qwer';</code>
+<code>ALTER DATABASE site OWNER TO site;</code>
+<code>GRANT ALL PRIVILEGES ON DATABASE site TO site;</code>
+<code>\q</code>
+</pre>
+        <p>Нужно настроить файл server.xml, расположенный в каталоге /opt/tomcat7/conf</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\site\opt\tomcat7\conf\server.xml" target="_blank">server.xml</a></td>
+              <td>/opt/tomcat7/conf</td>
+              <td>Файл параметров Apache Tomcat server.xml</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>А в файл context.xml, расположенный в том же каталоге, добавить строки после строки &lt;Context&gt;</p>
+        <pre><code>&lt;Resource</code>
+<code>   name=&quot;jdbc/freshSiteDS&quot;</code>
+<code>   auth=&quot;Container&quot;</code>
+<code>   type=&quot;javax.sql.DataSource&quot;</code>
+<code>   driverClassName=&quot;org.postgresql.Driver&quot;</code>
+<code>   url=&quot;jdbc:postgresql://localhost:5432/site&quot;</code>
+<code>   username=&quot;site&quot;</code>
+<code>   password=&quot;12345Qwer&quot;</code>
+<code>   removeAbandoned=&quot;true&quot;</code>
+<code>   removeAbandonedTimeout=&quot;90&quot;</code>
+<code>   logAbandoned=&quot;true&quot;</code>
+<code>   maxActive=&quot;30&quot;</code>
+<code>   maxIdle=&quot;20&quot;</code>
+<code>   maxWait=&quot;-1&quot; /&gt;</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\site\opt\tomcat7\conf\context.xml" target="_blank">context.xml</a></td>
+              <td>/opt/tomcat7/conf</td>
+              <td>Файл параметров Apache Tomcat, задающий настройки контекста для веб-приложений Tomcat</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>28.3. Каталоги статических файлов и индекса поиска</h2>
+        <p>Создание каталогов:</p>
+        <pre><code>mkdir -p /var/www/1cfreshl.example/media</code>
+<code>mkdir -p /var/www/1cfreshl.example/searchIndex</code>
+</pre>
+        <p>В каталог /var/www/1cfreshl.example/media нужно скопировать все содержимое каталога media дистрибутива сайта</p>
+        <p>И предоставить пользователю tomcat права на эти каталоги</p>
+        <pre><code>chown -R tomcat:tomcat /var/www/1cfreshl.example/media</code>
+<code>chown -R tomcat:tomcat /var/www/1cfreshl.example/searchIndex</code>
+</pre>
+        <h2>28.4. Установка приложения сайта</h2>
+        <p>Остановить службу Apache Tomcat</p>
+        <pre><code>systemctl stop tomcat7</code>
+</pre>
+        <p>Скопировать файл ROOT.war из дистрибутива сайта в каталог /opt/tomcat7/webapps</p>
+        <p>и выполнить команды</p>
+        <pre><code>cd /opt/tomcat7/webapps</code>
+<code>rm -rf ROOT</code>
+<code>unzip -q ROOT.war -d ROOT</code>
+<code>sed -i 's:&lt;file&gt;:&lt;file&gt;/opt/tomcat7/:g' ROOT/WEB-INF/classes/logback.xml</code>
+<code>rm -f ROOT.war</code>
+</pre>
+        <p>Запустить службу Apache Tomcat</p>
+        <pre><code>systemctl start tomcat7</code>
+</pre>
+        <h2>28.5. Проверка работы сайта</h2>
+        <p>В адресной строке браузера на хост-компьютере нужно ввести адрес:</p>
+        <pre><code>https://1cfreshl.example</code>
+</pre>
+        <h2>28.7. Мастер настройки</h2>
+        <p>Вызов мастера настройки: ввести в адресной строке браузера</p>
+        <pre><code>https://1cfreshl.example/settings/call_configuration_wizard</code>
+</pre>
+        <h2>28.8. Панель администрирования</h2>
+        <p>Вызов панели администрирования: ввести в адресной строке браузера</p>
+        <pre><code>https://1cfreshl.example/admin</code>
+</pre>
+        <p>Регистрация на сайте приложения «Работа в модели сервиса»</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\site\app\site\sample\logo.png" target="_blank">logo.png</a></td>
+              <td></td>
+              <td>Логотип приложения «Работа в модели сервиса» для сайта сервиса</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\site\app\site\sample\sample_short.txt" target="_blank">sample_short.txt</a></td>
+              <td></td>
+              <td>Краткое описание приложения «Работа в модели сервиса» для сайта сервиса</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\site\app\site\sample\sample_full.txt" target="_blank">sample_full.txt</a></td>
+              <td></td>
+              <td>Полное описание приложения «Работа в модели сервиса» для сайта сервиса</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\site\app\site\sample\sample_features.txt" target="_blank">sample_features.txt</a></td>
+              <td></td>
+              <td>Описание возможностей приложения «Работа в модели сервиса» для сайта сервиса</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\site\app\site\sample\sample_video.txt" target="_blank">sample_video.txt</a></td>
+              <td></td>
+              <td>Текст для видеороликов приложения «Работа в модели сервиса» для сайта сервиса</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Регистрация на сайте приложения «Управление нашей фирмой»</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\site\app\site\sbm\logo.png" target="_blank">logo.png</a></td>
+              <td></td>
+              <td>Логотип приложения «Управление нашей фирмой» для сайта сервиса</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\site\app\site\sbm\sbm_short.txt" target="_blank">sbm_short.txt</a></td>
+              <td></td>
+              <td>Краткое описание приложения «Управление нашей фирмой» для сайта сервиса</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\site\app\site\sbm\sbm_full.txt" target="_blank">sbm_full.txt</a></td>
+              <td></td>
+              <td>Полное описание приложения «Управление нашей фирмой» для сайта сервиса</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\site\app\site\sbm\sbm_features.txt" target="_blank">sbm_features.txt</a></td>
+              <td></td>
+              <td>Описание возможностей приложения «Управление нашей фирмой» для сайта сервиса</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\site\app\site\sbm\sbm_video.txt" target="_blank">sbm_video.txt</a></td>
+              <td></td>
+              <td>Текст для видеороликов приложения «Управление нашей фирмой» для сайта сервиса</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Регистрация на сайте приложения «Бухгалтерия предприятия»</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\site\app\site\ea\logo.png" target="_blank">logo.png</a></td>
+              <td></td>
+              <td>Логотип приложения «Бухгалтерия предприятия» для сайта сервиса</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\site\app\site\ea\ea_short.txt" target="_blank">ea_short.txt</a></td>
+              <td></td>
+              <td>Краткое описание приложения «Бухгалтерия предприятия» для сайта сервиса</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\site\app\site\ea\ea_full.txt" target="_blank">ea_full.txt</a></td>
+              <td></td>
+              <td>Полное описание приложения «Бухгалтерия предприятия» для сайта сервиса</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\site\app\site\ea\ea_features.txt" target="_blank">ea_features.txt</a></td>
+              <td></td>
+              <td>Описание возможностей приложения «Бухгалтерия предприятия» для сайта сервиса</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\site\app\site\ea\ea_video.txt" target="_blank">ea_video.txt</a></td>
+              <td></td>
+              <td>Текст для видеороликов приложения «Бухгалтерия предприятия» для сайта сервиса</td>
+            </tr>
+          </tbody>
+        </table>
+        <h1><a name="forum" id="forum"></a>Глава 29. Установка форума</h1>
+        <h2>29.1. База данных форума</h2>
+        <p>Создание базы данных PostgreSQL для форума  с именем forum</p>
+        <pre><code>su - postgres</code>
+<code>psql</code>
+<code>CREATE DATABASE forum ENCODING='UTF8' LC_CTYPE='ru_RU.UTF-8';</code>
+<code>CREATE USER forum WITH PASSWORD '12345Qwer';</code>
+<code>ALTER DATABASE forum OWNER TO forum;</code>
+<code>GRANT ALL PRIVILEGES ON DATABASE forum TO forum;</code>
+<code>\q</code>
+</pre>
+        <p>А в файл context.xml, расположенный в том же каталоге, добавить строки после строки &lt;Context&gt;</p>
+        <pre><code>&lt;Resource</code>
+<code>   name=&quot;jdbc/freshForumDS&quot;</code>
+<code>   auth=&quot;Container&quot;</code>
+<code>   type=&quot;javax.sql.DataSource&quot;</code>
+<code>   driverClassName=&quot;org.postgresql.Driver&quot;</code>
+<code>   url=&quot;jdbc:postgresql://localhost:5432/forum&quot;</code>
+<code>   username=&quot;forum&quot;</code>
+<code>   password=&quot;12345Qwer&quot;</code>
+<code>   removeAbandoned=&quot;true&quot;</code>
+<code>   removeAbandonedTimeout=&quot;90&quot;</code>
+<code>   logAbandoned=&quot;true&quot;</code>
+<code>   maxActive=&quot;30&quot;</code>
+<code>   maxIdle=&quot;20&quot;</code>
+<code>   maxWait=&quot;-1&quot;/&gt;</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\forum\opt\tomcat7\conf\context.xml" target="_blank">context.xml</a></td>
+              <td>/opt/tomcat7/conf</td>
+              <td>Файл параметров Apache Tomcat, задающий настройки контекста для веб-приложений Tomcat</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>29.2. Каталоги и файлы форума</h2>
+        <p>Создание каталогов для форума</p>
+        <pre><code>mkdir -p /var/www/forum/{mess_files,logo}</code>
+</pre>
+        <p>Задание прав на эти каталоги</p>
+        <pre><code>chown -R tomcat /var/www/forum</code>
+</pre>
+        <p>В каталог /var/www/forum/logo нужно поместить файлы для шапки и подвала страниц форума: header_logo.png и footer_logo.png</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\forum\var\www\forum\logo\header_logo.png" target="_blank">header_logo.png</a></td>
+              <td>/var/www/forum/logo</td>
+              <td>Логотип для шапки  форума</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\forum\var\www\forum\logo\footer_logo.png" target="_blank">footer_logo.png</a></td>
+              <td>/var/www/forum/logo</td>
+              <td>Логотип для подвала форума</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>29.3. Установка приложения форума</h2>
+        <p>Остановить службу Apache Tomcat</p>
+        <pre><code>systemctl stop tomcat7</code>
+</pre>
+        <p>Скопировать файл forum.war из дистрибутива сайта в каталог /opt/tomcat7/webapps</p>
+        <p>и выполнить команды</p>
+        <pre><code>cd /opt/tomcat7/webapps</code>
+<code>rm -rf forum</code>
+<code>unzip -q forum.war -d forum</code>
+<code>sed -i 's:&lt;File&gt;logs/:&lt;File&gt;/opt/tomcat7/logs/forum_:g' forum/WEB-INF/classes/logback.xml</code>
+<code>sed -i 's:&lt;FileNamePattern&gt;:&lt;FileNamePattern&gt;forum_:g'  forum/WEB-INF/classes/logback.xml</code>
+<code>rm -f forum.war</code>
+</pre>
+        <p>Запустить службу Apache Tomcat</p>
+        <pre><code>systemctl start tomcat7</code>
+</pre>
+        <h2>29.4. Настройка почтового сервера</h2>
+        <p>В файле /etc/postfix/master.cf после строки</p>
+        <pre><code>1025     inet  n       -       y       -       -       smtpd</code>
+</pre>
+        <p>вставить строку</p>
+        <pre><code>25       inet  n       -       y       -       -       smtpd</code>
+</pre>
+        <p>Обновить настройки postfix, введя команду:</p>
+        <pre><code>postfix reload</code>
+</pre>
+        <h2>29.5. Мастер настройки</h2>
+        <p>Вызов мастера настройки: ввести в адресной строке браузера</p>
+        <pre><code>https://1cfreshl.example/forum/admin</code>
+</pre>
+        <p>Действия после завершения мастера настройки</p>
+        <pre><code>systemctl stop tomcat7</code>
+<code>rm -rf /opt/tomcat7/work/Catalina/localhost/forum/*</code>
+<code>systemctl start tomcat7</code>
+</pre>
+        <h1><a name="static_page" id="static_page"></a>Глава 31. Статическая страница недоступности</h1>
+        <h2>31.1. Получение статической страницы недоступности</h2>
+        <p>Создание каталога для статической страницы недоступности</p>
+        <pre><code>mkdir -p /var/www/1cfreshl.example/i</code>
+</pre>
+        <p>Файлы и каталоги  получения статической страницы недоступности можно скопировать с 1cfresh.com</p>
+        <pre><code>cd /1c</code>
+<code>wget -p -k -nH https://1cfresh.com/i/</code>
+</pre>
+        <p>и адаптировать полученные в каталоге /1c/i  файлы</p>
+        <p>Или использовать готовые файлы:</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\static_page\var\www\1cfreshl.example\i/" target="_blank">(cм. по ссылке)</a></td>
+              <td>/var/www/1cfreshl.example/i</td>
+              <td>Файлы статической страницы недоступности для сайта сервиса (витрины 1cfreshl.example)</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>31.2. Установка статической страницы недоступности</h2>
+        <p>Команда копирования статической страницы недоступности из /1c/i в каталог /var/www/1cfreshl.example/i</p>
+        <pre><code>cp -rT  /1c/i  /var/www/1cfreshl.example/i</code>
+</pre>
+        <h2>31.3. Проверка статической страницы недоступности</h2>
+        <p>Прямой вызов статической страницы недоступности</p>
+        <pre><code>https://1cfreshl.example/i/</code>
+</pre>
+        <p>Вызов статической страницы недоступности при обращении к отсутствующему ресурсу сервиса</p>
+        <pre><code>https://1cfreshl.example/1234</code>
+</pre>
+        <h1><a name="am" id="am"></a>Глава 32. Менеджер доступности</h1>
+        <h2>32.2. Создание службы сервера «1С:Предприятия»</h2>
+        <p>Ввести команду</p>
+        <pre><code>systemctl edit srv1cv8-8.3.22.1709@am.service</code>
+</pre>
+        <p>В окне редактора ввести строки</p>
+        <pre><code>[Service]</code>
+<code>Environment=SRV1CV8_DATA=/home/usr1cv8/.1cv8/1C/1cv8_am</code>
+<code>Environment=SRV1CV8_PORT=2540</code>
+<code>Environment=SRV1CV8_REGPORT=2541</code>
+<code>Environment=SRV1CV8_RANGE=2560:2591</code>
+</pre>
+        <p>Нужно сохранить изменения и затем запустить службу:</p>
+        <pre><code>systemctl start srv1cv8-8.3.22.1709@am</code>
+<code>systemctl enable srv1cv8-8.3.22.1709@am</code>
+</pre>
+        <p>Создание каталогов для файлов публикаций информационной базы Работа в модели сервиса</p>
+        <pre><code>mkdir -p /var/www/1cfresh/a/sample</code>
+<code>mkdir -p /var/www/1cfresh/int/sample</code>
+</pre>
+        <p>Проверка состояния службы:</p>
+        <pre><code>systemctl status  srv1cv8-8.3.22.1709@am</code>
+<code>systemctl is-enabled srv1cv8-8.3.22.1709@am</code>
+<code>netstat -tlnp | grep 0:25</code>
+</pre>
+        <h2>32.6. Публикация менеджера доступности</h2>
+        <p>В каталог /etc/apache2/1cfresh.d  нужно поместить файлы am.a.conf и am.int.conf</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\am\etc\apache2\1cfresh.d\am.a.conf" target="_blank">am.a.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внешней публикации менеджера доступности для веб-сервера Apache</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\am\etc\apache2\1cfresh.d\am.int.conf" target="_blank">am.int.conf</a></td>
+              <td>/etc/apache2/1cfresh.d</td>
+              <td>Описание внутренней публикации менеджера доступности для веб-сервера Apache</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Создать каталог /var/www/1cfresh/a/am</p>
+        <pre><code>mkdir -p /var/www/1cfresh/a/am</code>
+</pre>
+        <p>И поместить туда файл внешней публикации default.vrd</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\am\var\www\1cfresh\a\am\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/a/am</td>
+              <td>vrd-файл внешней публикации менеджера доступности</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Создать каталог /var/www/1cfresh/int/am</p>
+        <pre><code>mkdir -p /var/www/1cfresh/int/am</code>
+</pre>
+        <p>И поместить туда файл внутренней публикации default.vrd</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\am\var\www\1cfresh\int\am\default.vrd" target="_blank">default.vrd</a></td>
+              <td>/var/www/1cfresh/int/am</td>
+              <td>vrd-файл внутренней публикации менеджера доступности</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Далее нужно проверить конфигурацию Apache</p>
+        <pre><code>apachectl configtest</code>
+</pre>
+        <p>И перезапустить веб-сервер Apache:</p>
+        <pre><code>systemctl restart apache2</code>
+</pre>
+        <h2>32.7. Проверка публикации менеджера доступности</h2>
+        <p>Получение WSDL-описания сервиса Availability менеджера доступности  (вызов должен быть от имени пользователя Manager)</p>
+        <pre><code>http://1cfreshl.example:8888/int/am/ws/Availability?wsdl</code>
+</pre>
+        <h2>32.10. Настройка сайта</h2>
+        <p>Вызов мастера настройки: ввести в адресной строке браузера</p>
+        <pre><code>https://1cfreshl.example/settings/call_configuration_wizard</code>
+</pre>
+        <h2>32.11. Настройка форума</h2>
+        <p>Вызов мастера настройки: ввести в адресной строке браузера</p>
+        <pre><code>https://1cfreshl.example/forum/admin</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\am\app\sm\am.png" target="_blank">am.png</a></td>
+              <td></td>
+              <td>Пиктограмма конфигурации «Менеджер доступности» (для использования в менеджере сервиса)</td>
+            </tr>
+          </tbody>
+        </table>
+        <h1><a name="na_page" id="na_page"></a>Глава 33. Страница недоступности</h1>
+        <h2>33.1. Установка страницы недоступности</h2>
+        <p>Остановить службу Apache Tomcat</p>
+        <pre><code>systemctl stop tomcat7</code>
+</pre>
+        <p>Скопировать файл availability.war из дистрибутива страницы недоступности в каталог /opt/tomcat7/webapps/ сервера 1cfreshl.example</p>
+        <p>Скопировать подкаталог etc дистрибутива страницы недоступности в корневой каталог 1cfreshl.example</p>
+        <p>Запустить службу Apache Tomcat</p>
+        <pre><code>systemctl start tomcat7</code>
+</pre>
+        <h2>33.2. Редактирование конфигурационных файлов</h2>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\na_page\etc\1c\1cfresh\availability\config\config.properties" target="_blank">config.properties</a></td>
+              <td>/etc/1c/1cfresh/availability/config</td>
+              <td>Параметры доступа к менеджеру доступности для страницы недоступности витрины 1cfreshl.example</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\na_page\etc\1c\1cfresh\availability\config\view.properties" target="_blank">view.properties</a></td>
+              <td>/etc/1c/1cfresh/availability/config</td>
+              <td>Параметры адресов сайта, форума и электронной почты для страницы недоступности витрины 1cfreshl.example</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\na_page\etc\1c\1cfresh\availability\msgs\content_messages_ru.properties" target="_blank">content_messages_ru.properties</a></td>
+              <td>/etc/1c/1cfresh/availability/msgs</td>
+              <td>Тексты сообщений страницы недоступности витрины 1cfreshl.example (русская локаль)</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\na_page\etc\1c\1cfresh\availability\msgs\content_messages_en.properties" target="_blank">content_messages_en.properties</a></td>
+              <td>/etc/1c/1cfresh/availability/msgs</td>
+              <td>Тексты сообщений страницы недоступности витрины 1cfreshl.example (английская локаль)</td>
+            </tr>
+          </tbody>
+        </table>
+        <h1><a name="showroom" id="showroom"></a>Глава 34. Использование витрин</h1>
+        <h2>34.4. Настройка файлов и каталогов</h2>
+        <p>Настройка файла hosts на сервере 1cfreshl.example</p>
+        <pre><code>echo &quot;127.0.0.2  showroom.example  showroom&quot; &gt;&gt; /etc/hosts</code>
+</pre>
+        <p>Cоздание файлов паролей для администрирования сайта и форума</p>
+        <pre><code>cd /etc/nginx/password</code>
+<code>mkdir showroom</code>
+<code>htpasswd -cmb showroom/.htpasswd admin 12345Qwer</code>
+<code>chown -R root:nginx showroom</code>
+<code>chmod -R 660 showroom</code>
+<code>chmod 750 showroom</code>
+</pre>
+        <p>Поместить в каталог /1c/cert файл showroom.data.sh с данными для генерации сертификата</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\showroom\1c\cert\showroom.data.sh" target="_blank">showroom.data.sh</a></td>
+              <td>/1c/cert</td>
+              <td>Данные SSL-сертификата для домена showroom.example</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Сгенерировать сертификат командой:</p>
+        <pre><code>/1c/cert/add_certificate.sh  showroom</code>
+</pre>
+        <p>Создание каталога статической страницы недоступности</p>
+        <pre><code>mkdir -p /var/www/showroom.example/i</code>
+</pre>
+        <p>Копирование туда файлов из каталога статической страницы недоступности 1cfresh.example</p>
+        <pre><code>cp -rT  /var/www/1cfreshl.example/i  /var/www/showroom.example/i</code>
+</pre>
+        <p>Замена в index.html строки 1cfreshl на showroom</p>
+        <pre><code>sed -i 's:1cfreshl:showroom:g' /var/www/showroom.example/i/index.html</code>
+</pre>
+        <p>Изменить фоновое изображение статической страницы недоступности</p>
+        <pre><code>cd /var/www/showroom.example/i/resources/css/img</code>
+<code>mogrify \( -modulate 135,0,100 \) -fill 'hsb(120,56%,59%)' -tint 100 -brightness-contrast 2x-8 back-color-yellow.png</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\showroom\var\www\showroom.example\i/" target="_blank">(cм. по ссылке)</a></td>
+              <td>/var/www/showroom.example/i</td>
+              <td>Файлы статической страницы недоступности для витрины showroom.example</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Создать каталоги для сайта витрины showroom</p>
+        <pre><code>mkdir -p /var/www/showroom.example/media</code>
+<code>mkdir -p /var/www/showroom.example/searchIndex</code>
+</pre>
+        <p>Cкопировать в каталог /var/www/showroom.example/media все содержимое каталога media дистрибутива сайта</p>
+        <p>Задать права на каталоги сайта витрины</p>
+        <pre><code>chown -R tomcat:tomcat /var/www/showroom.example/media</code>
+<code>chown -R tomcat:tomcat /var/www/showroom.example/searchIndex</code>
+</pre>
+        <p>Создание файла favicon.ico для витрины showroom.example.</p>
+        <pre><code>cd /var/www/showroom.example</code>
+<code>curl https://1cfresh.com/favicon.ico --output favicon.ico</code>
+</pre>
+        <h2>34.5. Настройки NGINX</h2>
+        <p>В каталог /etc/nginx/upstreams надо поместить файлы upstream-showroom.conf и upstream-availability-sr.conf</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\showroom\etc\nginx\upstreams\upstream-showroom.conf" target="_blank">upstream-showroom.conf</a></td>
+              <td>/etc/nginx/upstreams</td>
+              <td>Файл конфигурации NGINX — перенаправление запросов  на витрину showroom.example</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\showroom\etc\nginx\upstreams\upstream-availability-sr.conf" target="_blank">upstream-availability-sr.conf</a></td>
+              <td>/etc/nginx/upstreams</td>
+              <td>Файл конфигурации NGINX — перенаправление запросов  на страницу недоступности витрины showroom.example</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>В каталог /etc/nginx/include надо поместить файл 1c_showroom_auth.conf</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\showroom\etc\nginx\include\1c_showroom_auth.conf" target="_blank">1c_showroom_auth.conf</a></td>
+              <td>/etc/nginx/include</td>
+              <td>Файл конфигурации NGINX — проверка аутентификации при обращении к страницам витрины showroom (мастеру настройки и панели администрирования)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>В каталог /etc/nginx/vhosts надо поместить файлы showroom.example-ssl.conf и showroom.example.conf</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\showroom\etc\nginx\vhosts\showroom.example.conf" target="_blank">showroom.example.conf</a></td>
+              <td>/etc/nginx/vhosts</td>
+              <td>Файл конфигурации NGINX — обработка входящих HTTP-запросов к домену showroom.example</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\showroom\etc\nginx\vhosts\showroom.example-ssl.conf" target="_blank">showroom.example-ssl.conf</a></td>
+              <td>/etc/nginx/vhosts</td>
+              <td>Файл конфигурации NGINX — обработка входящих HTTPS-запросов к домену showroom.example</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Далее надо проверить конфигурацию NGINX</p>
+        <pre><code>nginx -t</code>
+</pre>
+        <p>И выполнить перезапуск NGINX</p>
+        <pre><code>systemctl restart nginx</code>
+</pre>
+        <h2>34.6. Развертывание сайта витрины</h2>
+        <p>Добавить в файл /etc/postgresql/10/main/pg_hba.conf строку</p>
+        <pre><code>host     showroom    showroom      127.0.0.1/16      md5</code>
+</pre>
+        <p>Перезапустить службу PostgreSQL</p>
+        <pre><code>systemctl restart postgresql</code>
+</pre>
+        <p>Создать базу данных сайта для витрины</p>
+        <pre><code>su - postgres</code>
+<code>psql</code>
+<code>CREATE DATABASE showroom ENCODING='UTF8' LC_CTYPE='ru_RU.UTF-8';</code>
+<code>CREATE USER showroom WITH PASSWORD '12345Qwer';</code>
+<code>ALTER DATABASE showroom OWNER TO showroom;</code>
+<code>GRANT ALL PRIVILEGES ON DATABASE showroom TO showroom;</code>
+<code>\q</code>
+<code>exit</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\showroom\etc\postgresql\14\main\pg_hba.conf" target="_blank">pg_hba.conf</a></td>
+              <td>/etc/postgresql/14/main</td>
+              <td>Файл параметров аутентификации пользователей СУБД PostgreSQL</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>34.6. Развертывание сайта витрины</h2>
+        <p>Остановить службу Apache Tomcat</p>
+        <pre><code>systemctl stop tomcat7</code>
+</pre>
+        <p>В файл server.xml, расположенный в каталоге /opt/tomcat7/conf, нужно добавить еще один блок Service, в котором указано, что служба должна слушать порт 8001 и использовать каталог Java-приложений srapps</p>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\showroom\opt\tomcat7\conf\server.xml" target="_blank">server.xml</a></td>
+              <td>/opt/tomcat7/conf</td>
+              <td>Файл параметров Apache Tomcat, задающий настройки контейнеров сервлетов и служб Tomcat</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>В файл content.xml, расположенный в том же каталоге, нужно добавить описание настроек доступа к базе данных сайта витрины</p>
+        <pre><code>su - postgres</code>
+<code>psql</code>
+<code>CREATE DATABASE showroom ENCODING='UTF8' LC_CTYPE='ru_RU.UTF-8';</code>
+<code>CREATE USER showroom WITH PASSWORD '12345Qwer';</code>
+<code>ALTER DATABASE showroom OWNER TO showroom;</code>
+<code>GRANT ALL PRIVILEGES ON DATABASE showroom TO showroom;</code>
+<code>\q</code>
+<code>exit</code>
+<code>su - postgres</code>
+<code>psql</code>
+<code>CREATE DATABASE showroom ENCODING='UTF8' LC_CTYPE='ru_RU.UTF-8';</code>
+<code>CREATE USER showroom WITH PASSWORD '12345Qwer';</code>
+<code>ALTER DATABASE showroom OWNER TO showroom;</code>
+<code>GRANT ALL PRIVILEGES ON DATABASE showroom TO showroom;</code>
+<code>\q</code>
+<code>exit</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\showroom\opt\tomcat7\conf\context.xml" target="_blank">context.xml</a></td>
+              <td>/opt/tomcat7/conf</td>
+              <td>Файл параметров Apache Tomcat, задающий настройки контекста для веб-приложений Tomcat</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Создать каталог /opt/tomcat7/srapps</p>
+        <pre><code>mkdir -p /opt/tomcat7/srapps</code>
+</pre>
+        <p>Настройка прав на этот каталог</p>
+        <pre><code>chown tomcat:tomcat /opt/tomcat7/srapps</code>
+</pre>
+        <p>Далее нужно скопировать файл ROOT.war из дистрибутива сайта в каталог /opt/tomcat7/srapps сервера 1cfreshl.example и выполнить команды:</p>
+        <pre><code>cd /opt/tomcat7/srapps</code>
+<code>unzip -q ROOT.war -d ROOT</code>
+<code>sed -i 's: &lt;file&gt;logs/site:&lt;file&gt;/opt/tomcat7/logs/showroom:g' ROOT/WEB-INF/classes/logback.xml</code>
+<code>sed -i 's:&lt;FileNamePattern&gt;site:&lt;FileNamePattern&gt;showroom:g'   ROOT/WEB-INF/classes/logback.xml</code>
+<code>sed -i 's:jdbc/freshSiteDS:jdbc/freshShowroomDS:g'  ROOT/WEB-INF/applicationContext.xml</code>
+<code>sed -i 's:jdbc/freshSiteDS:jdbc/freshShowroomDS:g'  ROOT/WEB-INF/web.xml</code>
+<code>rm -f ROOT.war</code>
+</pre>
+        <p>Для индивидуализации сайта showroom можно изменить цвета оформления командами:</p>
+        <pre><code>mogrify \( -modulate 135,0,100 \) -fill 'hsb(120,56%,59%)' -tint 100 -brightness-contrast 2x-8 ROOT/static/css/img/back-color-yellow.png</code>
+<code>mogrify \( -modulate 136,0,100 \) -fill 'hsb(196,54%,67%)' -tint 100 ROOT/static/css/img/back-color-red.png</code>
+</pre>
+        <p>Запустить службу Apache Tomcat</p>
+        <pre><code>systemctl start tomcat7</code>
+</pre>
+        <h2>34.7. Настройка сайта витрины</h2>
+        <p>Показ сайта витрины: ввести в адресную строку браузера</p>
+        <pre><code>https://showroom.example</code>
+</pre>
+        <p>Вызов мастера настройки витрины</p>
+        <pre><code>https://showroom.example/settings/call_configuration_wizard</code>
+</pre>
+        <p>Вызов панели администрирования витрины</p>
+        <pre><code>https://showroom.example/admin</code>
+</pre>
+        <p>Очистка кэша NGINX</p>
+        <pre><code>systemctl stop nginx</code>
+<code>rm -rf /var/cache/nginx/*</code>
+<code>systemctl start nginx</code>
+</pre>
+        <h2>34.8. Проверка функционирования витрины</h2>
+        <p>Показ сайта витрины: ввести в адресную строку браузера</p>
+        <pre><code>https://showroom.example</code>
+</pre>
+        <h2>34.9. Проверка статической страница недоступности</h2>
+        <p>Ввести в адресную строку браузера</p>
+        <pre><code>https://showroom.example/1234</code>
+</pre>
+        <h2>34.10. Установка страницы недоступности</h2>
+        <p>Скопировать файлы параметров страницы недоступности основной витрины 1cfreshl.example</p>
+        <pre><code>cd /etc/1c/1cfresh</code>
+<code>cp -rT availability availability-showroom</code>
+</pre>
+        <p>Изменить в них все вхождения строки 1cfreshl на showroom</p>
+        <pre><code>cd /etc/1c/1cfresh/availability-showroom</code>
+<code>sed -i 's/1cfreshl/showroom/g' config/config.properties</code>
+<code>sed -i 's/1cfreshl/showroom/g' config/view.properties</code>
+<code>sed -i 's/1cfreshl/showroom/g' msgs/content_messages_ru.properties</code>
+</pre>
+        <p>Остановить службу Apache Tomcat</p>
+        <pre><code>systemctl stop tomcat7</code>
+</pre>
+        <p>Скопировать файл availability.war из дистрибутива страницы недоступности в каталог /opt/tomcat7/srapps, и  затем ввести команды:</p>
+        <pre><code>cd /opt/tomcat7/srapps</code>
+<code>unzip -q availability.war -d availability</code>
+<code>sed -i 's:\(1cfresh.availability\):\1-showroom:g' availability/WEB-INF/spring-mvc-servlet.xml</code>
+<code>sed -i 's:\(1cfresh.availability\):\1-showroom:g' availability/WEB-INF/ws-context.xml</code>
+<code>rm -f availability.war</code>
+</pre>
+        <p>Для индивидуализации страницы недоступности можно изменить основной цвет оформления командой:</p>
+        <pre><code>mogrify \( -modulate 135,0,100 \) -fill 'hsb(120,56%,59%)' -tint 100 -brightness-contrast 2x-8 availability/static/css/img/back-color-yellow.png</code>
+</pre>
+        <p>И запустить службу Apache Tomcat</p>
+        <pre><code>systemctl start tomcat7</code>
+</pre>
+        <table class="cyanheadergrid">
+          <thead>
+            <th>Файл/файлы</th>
+            <th>Каталог</th>
+            <th>Описание</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="hyperlink" href="files\showroom\etc\1c\1cfresh\availability-showroom\config\config.properties" target="_blank">config.properties</a></td>
+              <td>/etc/1c/1cfresh/availability-showroom/config</td>
+              <td>Параметры доступа к менеджеру доступности для страницы недоступности витрины showroom.example</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\showroom\etc\1c\1cfresh\availability-showroom\config\view.properties" target="_blank">view.properties</a></td>
+              <td>/etc/1c/1cfresh/availability-showroom/config</td>
+              <td>Параметры адресов сайта, форума и электронной почты для страницы недоступности витрины showroom.example</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\showroom\etc\1c\1cfresh\availability-showroom\msgs\content_messages_ru.properties" target="_blank">content_messages_ru.properties</a></td>
+              <td>/etc/1c/1cfresh/availability-showroom/msgs</td>
+              <td>Тексты сообщений страницы недоступности витрины showroom.example (русская локаль)</td>
+            </tr>
+            <tr>
+              <td><a class="hyperlink" href="files\showroom\etc\1c\1cfresh\availability-showroom\msgs\content_messages_en.properties" target="_blank">content_messages_en.properties</a></td>
+              <td>/etc/1c/1cfresh/availability-showroom/msgs</td>
+              <td>Тексты сообщений страницы недоступности витрины showroom.example (английская локаль)</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>34.11. Проверка страницы недоступности</h2>
+        <p>Создать в менеджере сервиса или менеджере доступности уведомление о недоступности для приложения, опубликованного на витрине showroom.example</p>
+        <p>И через некоторое время ввести в адресную строку браузера адрес</p>
+        <pre><code>https://showroom.example/availability/</code>
+</pre>
+        <p>Показ страницы недоступности для отсутствующей страницы сервиса — ввести в адресную строку браузера адрес</p>
+        <pre><code>https://showroom.example/1234</code>
+</pre>
+        <h1><a name="advfeatures" id="advfeatures"></a>Глава 35. Вспомогательные возможности</h1>
+        <h2>35.2. Задействование внешнего управления сеансами</h2>
+        <p>Строка описания веб-сервиса внешнего управления сеансами</p>
+        <pre><code>wsdl=http://1cfreshl.example:8888/int/seances/ws/SessionControl_1_0_1_2?wsdl;ns=http://www.1c.ru/1cFresh/SessionManagement_1_0_1_2;srvc=SessionControl_1_0_1_2;port=SessionControl_1_0_1_2Soap;wsver=3;tout=10</code>
+</pre>
+      </div>
+    </div>
+  </body>
+</html>

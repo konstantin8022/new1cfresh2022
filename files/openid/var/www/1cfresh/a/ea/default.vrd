@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<point
+   base="/a/ea"
+   ib="Srvr=1cfreshl.example;Ref=ea;"
+   xmlns="http://v8.1c.ru/8.2/virtual-resource-system"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <zones>
+      <zone specify="false" safe="true"/>
+      <zone specify="true" safe="true"/>
+   </zones>
+   <ws
+      pointEnableCommon="false"
+      publishExtensionsByDefault="true">
+      <point
+         name="Exchange"
+         alias="exchange.1cws"
+         enable="true"/>
+      <point
+         name="Exchange_2_0_1_6"
+         alias="exchange_2_0_1_6.1cws"
+         enable="true"/>
+      <point
+         name="Exchange_3_0_1_1"
+         alias="exchange_3_0_1_1.1cws"
+         enable="true"/>
+      <point
+         name="InterfaceVersion"
+         alias="InterfaceVersion.1cws"
+         enable="true"/>
+      <point
+         name="RemoteControl"
+         alias="RemoteControl.1cws"
+         enable="true"/>
+      <point
+         name="MobileAccounting"
+         alias="MobileAccounting.1cws"
+         enable="true"/>
+      <point
+         name="MobileEntrepreneur"
+         alias="MobileEntrepreneur.1cws"
+         enable="true"/>
+      <point
+         name="MobileEntrepreneur_1_0_2_1"
+         alias="MobileEntrepreneur_1_0_2_1.1cws"
+         enable="true"/>
+      <point
+         name="EnterpriseDataUpload_1_0_1_1"
+         alias="EnterpriseDataUpload_1_0_1_1.1cws"
+         enable="true"/>
+      <point
+         name="EnterpriseDataExchange_1_0_1_1"
+         alias="EnterpriseDataExchange_1_0_1_1.1cws"
+         enable="true"/>
+   </ws>
+
+   <httpServices 
+      publishByDefault="false" 
+      publishExtensionsByDefault="true">
+      <service
+         name="ПередачаДанных"
+         rootUrl="dt"
+         enable="true"/>
+   </httpServices>
+   <openid>
+      <rely url="https://1cfreshl.example/a/openid/e1cib/oid2op" />
+   </openid>
+</point>

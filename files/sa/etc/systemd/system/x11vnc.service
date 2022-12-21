@@ -1,0 +1,12 @@
+[Unit]
+Description=VNC Server for X11
+Requires=Xvfb.service
+After=Xvfb.service
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/x11vnc -rfbport 5900 -display :99 -forever -bg -o /tmp/x11vnc.log -xkb -noxrecord -noxfixes -noxdamage -nomodtweak
+
+[Install]
+WantedBy=multi-user.target
+

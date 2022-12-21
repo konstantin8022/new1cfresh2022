@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<point 
+    xmlns="http://v8.1c.ru/8.2/virtual-resource-system"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    base="/a/agt"
+    ib="Srvr=1cfreshl.example;Ref=sm;Usr=u_gatetest1;Pwd=12345Qwer;">
+    <zones>
+        <zone specify="true"/>
+    </zones>
+    <ws pointEnableCommon="false">
+        <point 
+            name="AppGateTest"
+            alias="AppGateTest.1cws"
+            enable="true"/>
+    </ws>
+</point>

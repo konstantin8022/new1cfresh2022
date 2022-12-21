@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<point
+    base="/a/tariff"
+    ib="Srvr=1cfreshl.example;Ref=sm;"
+    xmlns="http://v8.1c.ru/8.2/virtual-resource-system"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ws pointEnableCommon="false">
+        <point
+            name="TariffControl_1_0_0_1"
+            alias="tariffcontrol_1_0_0_1.1cws"
+            enable="true"/>
+        <point 
+            name="TariffControl_1_0_1_1"
+            alias="tariffcontrol_1_0_1_1.1cws"
+            enable="true"/>
+    </ws>
+</point>

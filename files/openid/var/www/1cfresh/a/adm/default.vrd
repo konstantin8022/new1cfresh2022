@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<point
+    xmlns="http://v8.1c.ru/8.2/virtual-resource-system" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    base="/a/adm"
+    ib="Srvr=1cfreshl.example;Ref=sm;">
+
+    <ws pointEnableCommon="false"
+        publishExtensionsByDefault="true">
+        <point 
+            name="ExternalRegistration_1_0_0_1"
+            alias="ExternalRegistration_1_0_0_1.1cws"
+            enable="true"/>
+        <point
+            name="RemoteControl"
+            alias="RemoteControl.1cws"
+            enable="true"/>
+    </ws>
+
+    <httpServices publishByDefault="false">
+        <service 
+            name="FastExternalRegistration"
+            rootUrl="FastExternalRegistration"
+            enable="true"/>
+        <service 
+            name="ExternalRegistration"
+            rootUrl="ExternalRegistration"
+            enable="true"/>
+        <service
+            name="UniversalIntegration"
+            rootUrl="ui"
+            enable="true"/>
+        <service
+            name="Subscriber"
+            rootUrl="subscriber"
+            enable="true"/>
+        <service 
+            name="ExtAPI"
+            rootUrl="ext_api"
+            enable="true"/>
+        <service
+            name="ПромоРегистрация"
+            rootUrl="promo_reg"
+            enable="true"/>
+        <service
+            name="ApplicationTariffControl_1_0_1_1"
+            rootUrl="ApplicationTariffControl_1_0_1_1"
+            enable="true"/>
+    </httpServices>
+    <openid>
+        <rely url="https://1cfreshl.example/a/openid/e1cib/oid2op" />
+    </openid>
+</point>

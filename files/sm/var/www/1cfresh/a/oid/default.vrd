@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<point
+    base="/a/oid"
+    ib="Srvr=1cfreshl.example;Ref=sm;Usr=u_oid;Pwd=12345Qwer;"
+    xmlns="http://v8.1c.ru/8.2/virtual-resource-system"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <httpServices
+        publishByDefault="false"
+        publishExtensionsByDefault="true">
+        <service
+            rootUrl="oid2op"
+            enable="true"
+            reuseSessions="autouse"
+            sessionMaxAge="20" 
+            poolSize="100"
+            poolTimeout="5"/>
+    </httpServices>
+    <pool 
+        size="50"
+        maxAge="10"
+        attempts="2" />
+</point>

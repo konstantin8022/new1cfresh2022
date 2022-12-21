@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Context>
+    <Resource 
+        name="jdbc/freshSiteDS"
+        auth="Container"
+        type="javax.sql.DataSource"
+        driverClassName="org.postgresql.Driver"
+        url="jdbc:postgresql://localhost:5432/site"
+        username="site"
+        password="12345Qwer"
+        removeAbandoned="true"
+        removeAbandonedTimeout="90"
+        logAbandoned="true"
+        maxActive="30"
+        maxIdle="20"
+        maxWait="-1" />
+    <Resource 
+        name="jdbc/freshShowroomDS"
+        auth="Container"
+        type="javax.sql.DataSource"
+        driverClassName="org.postgresql.Driver"
+        url="jdbc:postgresql://localhost:5432/showroom"
+        username="showroom"
+        password="12345Qwer"
+        removeAbandoned="true"
+        removeAbandonedTimeout="90"
+        logAbandoned="true"
+        maxActive="30"
+        maxIdle="20"
+        maxWait="-1" />
+    <Resource name="jdbc/freshForumDS"
+        auth="Container"
+        type="javax.sql.DataSource"
+        driverClassName="org.postgresql.Driver"
+        url="jdbc:postgresql://localhost:5432/forum"
+        username="forum"
+        password="12345Qwer"
+        removeAbandoned="true"
+        removeAbandonedTimeout="90"
+        logAbandoned="true"
+        maxActive="30"
+        maxIdle="20"
+        maxWait="-1"/>
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+</Context>
